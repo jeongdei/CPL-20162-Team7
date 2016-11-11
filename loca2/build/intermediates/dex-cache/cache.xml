@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/de3/Desktop/loca2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="2d2f8c653627a5b990c5aa8f33ec541ae56e2ab8">
+        <dex dex="/Users/de3/Desktop/loca2/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_0bab50c5eac339c97de14317dbeac6e42501bdcd.jar" />
+    </item>
+
+</items>

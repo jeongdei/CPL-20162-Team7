@@ -1,0 +1,2 @@
+CHANGED,/Users/de3/Desktop/quick_call/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/Users/de3/Desktop/quick_call/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/example/de3/quick_call/MapsActivity$override.class

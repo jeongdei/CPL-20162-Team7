@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="c96952c162c9f6076f44c5939982cb35491442ea">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-plus-9.0.2_86b7ba0fcd8f75ae81479b4edd7e017f9c1795c3.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="53f10fcd322a3931495d6ca2078a81f4957cdbce">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-fitness-9.0.2_c69a3c247c7dd33ac5d79d9027c20f7bbf0ba49e.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="51a11c41a08f099a204e1b8dcc04f27217de50ec">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-9.0.2_fb2c4bdec243562361eebb7e8a609229a1e7d273.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="fa472b7cbd3897bf6bed6068ac0b00e494987688">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-9.0.2_fdcfea54758f22d9cee174c9c21e85e5a0003d12.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="fe5b47e764869f1076cb9cfe12801ed2ef4e9117">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-9.0.2_a1e4e397ecfa3dc9aeb282844b0ffe368bb1487e.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="b8e0372ca6dc89ac4fe22b76eeea4f68ece435b8">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-lite-9.0.2_cc64f44bd752c7a4eb3c929a4709bf571e8aa952.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="92a1d5f71b0fc8938f1d3f2e6ef984b52b894b4d">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-9.0.2_0f1af518ea3e7f2a4f2d192a0e8552c6cdc607cf.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-module/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="79e298d7fed2fcada58da7032d07d34ee198a545">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-module-9.0.2_97ce05b30adf4dd1069011bc4cba658f5b58beb1.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="bc156efaaee99f1ef6bf471347373a4cbb28e2a1">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wallet-9.0.2_5562ffb0b9fea85150756f5acdcf8b4af5e41fac.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="a511c684ea4c2cf31a3377d51e7677cb76696e07">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-9.0.2_cc3a22588b80adcf1e9763491cd28902ec6d1fa5.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="4022261eeea0d92eb2997a68d2c1f084a16abad9">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.0.2_ea596d48f1b36d5f1622bfc119cb0e44bef953e3.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="d900f2a1ff098cac8befe6c023d723e9afb154be">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appindexing-9.0.2_d7c776dfae3ba7867863f32130c7988c86928514.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="060a7157438a0b1b0706b99c430fb3ecbc5a79a4">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-9.0.2_888b6f0239b2487ef67de959a05684c12df3c1c3.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="94d9cedd04b124aed044ac71c451a292856d854c">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.0.2_e97655351028592de10071a3c2470a2305d4371a.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="cf16220db9128d91a215aedc739584181d5ca6a4">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-iid-9.0.2_b4d77ae408a5cdac9aa80f4a363d6ae4e832132a.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.android.support-mediarouter-v7-23.0.0_470345e9abd4224a352151d57c3b8a2787decd40.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="6c58c14d15602fea2c50138c73bb107e8b832b62">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-impl-9.0.2_b9c74898c9b45ff31e515ef23958ecb6f37bce37.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="a498fab72f8663c26fbf3d4496eb6b673b17bcae">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-games-9.0.2_c84c70d21c3530d4a4c7f8692ec32733f7d66b36.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="f4fb6981392ca7680d02fd57d26d6124c141d9d9">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-9.0.2_c757e63518c357e769f8f5a39340fc664d050ad3.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="568d5bda0b4d51f90d978ace369bb9ad024d2057">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-common-9.0.2_c4adf65336bb58829f3097a43a1d1fdb9cd941fd.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="922c24fbfc4247947fcfaf2b95f295a16a8c3d17">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-crash-9.0.2_2111fa46462d03e58d3efb1bdc05326492c932c7.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="f399a2fde7888450cadcaec4974bfd169d8cce43">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tagmanager-api-9.0.2_7ded9960d15b3f4fc4a8b57c089ff274a2779bc9.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="cd4c7c54e15d9ccbc448384fa2c4684d69ca73f0">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-storage-9.0.2_a290b4cd5953788c75c3dfd36bbc92d559702651.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="4ec890171a97b5ab98292f131aa784e0f3792c73">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-9.0.2_67a3b1b1e1e5923e6214b56b303028027da6bb10.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.0.2_1c0134b63d5fa0487a67bc79fbc41697ebc6dd08.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="604ecf403feb0084dc6d0c12f1677a490cf45e4c">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-config-9.0.2_895ee70f284aff05cd3309a1cb47e72be424510c.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="e6970f0554f9508c041f1f6960af15cc888c9f35">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-9.0.2_495bc77d4deff0e4dfcd0efc7a15e1005e8f5d07.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_dd666a721828f415c7199b6b9e3e9a8886f4a92d.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="b6af089f583d547bcffc0689b2e80bc7aaa54b15">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-safetynet-9.0.2_d7cbde0bad8490e7a977f580b57301afe593f26f.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_d6950dd2f903a13348c4a65b2f3eb582ea418b1a.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="8c0fc9b1ea0bac0cb31d60c8b1bf2feb0518e3a9">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-panorama-9.0.2_512c7bfb9d8300543d3118f069eea4ed0cd5e7eb.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="1f31789bd6e4b86b81e6d1595c45f6091ae6a726">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_3603dddf4e4d484262b956e98198a5a25985edc2.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="7e52b440a26498c56b4f263e215223b5451c955e">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-nearby-9.0.2_f81240d99a907e785e6217dc57710010f93b8b2b.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="a45bc1ed812137b21dddd1cedaa3712b308f0b3f">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-cast-9.0.2_9e7bb258a5379a520b7a523308ad40e2f1f6eb39.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="2ab5be19bbd34bae74662ea6b2d4451314d92d97">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-vision-9.0.2_57204a530f6e0c2f1ef1a4195e042f3fd0fb5935.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_d95bedc0e7a7b51953f4c39d22e4ef41a1dd2994.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_7c4e3ff76d6b4660228fad0e124fbefe68bff06b.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.0_a5dc3c0921e361146e89fc6f81e4fddfd361c9c2.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="f2774b1e02e5fbc524590311a744263c3b152d63">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-9.0.2_aadfa10bb09cd2db9ead0da28dc6656caef26fdb.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="9919563cffd8e3732e944d3c437d4b9575a08448">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-9.0.2_cccff7ea59a029467d1fbde25202019411c74700.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="d9ea4cdaafa29ec4651d6e4715788d3fcaa7b913">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tagmanager-9.0.2_284178a3c7bac0643cbebaa8643ba8db2ff4b934.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="6ff48ef26bc539c78af4aa061cb9bad6abcbf5e8">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-storage-common-9.0.2_1282ff63d621189d9202791fc0aff51ffcafe1d0.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="9819419ce8d79f3f81a0fc70f9345ac8c843af9c">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-connection-9.0.2_a10596d374901d33d2479502fd228bffe312b502.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="20e1a0f0de6276a5f36062b655f8b20f8cc00cc4">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-9.0.2_226172322f55ac97fb7ba974a4a89e86c71bde75.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="e11da70cff6a544a45cdc21f419802d9bb9043ac">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appinvite-9.0.2_3bbbf56271bab0fcf8a6bba7e9806b243d8c5824.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_bf1c7450969b1eeada08036ad9367a3cd64f3b40.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="143813b18381b28de1e04aae1d92fcb374a0add9">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-drive-9.0.2_b469f546a74fc75ce0fe5e1791ed07f90491f97d.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="0c835e9f3875cf245877c9b17d1c69bc98f16057">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-identity-9.0.2_70541ba00d93a7ab0464c7bdc8b03344731c7854.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="829c6e46cb221c2102801221c648b77113743e81">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-base-9.0.2_3295d49425ccfab4f6dd06a617fe76cd846586cd.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="d55e8627b36a2c89e2fe62bd94b0aa636f8c0693">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/instant-run_8be415f7997ba866b6ab8ab544dd97f10da785f7.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_8ad4b50a3dc8beb54fbb76c1cc5fbaad1caa3bb6.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="b3d0809a742c5f768c6aa9efc6decd5c1d6cd227">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-9.0.2_924801f098dcccd937d8810b1efd300fcd688e15.jar" />
+    </item>
+    <item
+        jar="/Users/de3/Desktop/MyApplication/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/9.0.2/jars/classes.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="764d32faf85bc6f7bd2cdcb3a70a482c1884fdd2">
+        <dex dex="/Users/de3/Desktop/MyApplication/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wearable-9.0.2_35ab6c932c0e45df0661b42aaea964eb19eee13c.jar" />
+    </item>
+
+</items>
