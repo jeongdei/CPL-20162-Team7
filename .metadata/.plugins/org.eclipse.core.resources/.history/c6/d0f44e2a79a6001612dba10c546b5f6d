@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="remote_control">
+        <property name="context-root" value="remote_control"/>
+        <property name="java-output-path" value="/remote_control/build/classes"/>
+    </wb-module>
+</project-modules>
