@@ -1,0 +1,133 @@
+<!DOCTYPE html><html class=''>
+<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-5710c30fb566082d9fcb6e7d97ee7e3f2a326128c9f334a4231b6fd752b29965.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-d5e4bf42585b8da8c18f7d963dbfc17cd66a79aa586c9448c4de8d6952ee9d97.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-25d1423d5d6fb975e7d61832d2c061422a94963ca446583b965dfc5569147311.js'></script><meta charset='UTF-8'><meta name="robots" content="no index"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/JTParrett/pen/BkDie" />
+
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'><script src='https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js'></script>
+<style class="cp-pen-styles">
+.content {
+  height: 3000px;
+}
+.wrapper {
+  position: fixed;
+}
+
+.wrapper .box {
+  width: 100px;
+  height: 400px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 160%;
+  color: #fff;
+  position: absolute;
+  background: #ff8330;
+}
+
+.wrapper .box:nth-of-type(2) {
+  left: 100px;
+  background: #E01B5D;
+}
+
+.wrapper .box:nth-of-type(3) {
+  left: 200px;
+  background: #30FFFF;
+}
+
+.wrapper .box:nth-of-type(4) {
+  left: 300px;
+  background: #B3FF30;
+}
+
+.wrapper .box:nth-of-type(5) {
+  left: 400px;
+  background: #308AFF;
+}
+
+.wrapper .box:nth-of-type(6) {
+  left: 500px;
+  background: #1BE059;
+}</style></head>
+<body>
+<div class="content" >
+  <div class="wrapper" id = "ms" style="overflow:scroll; height: 300px; width:680px; background-color:gold;">
+    <div class="box" id = "kk" value="1" data-scroll-speed="20">S</div>
+    	<!-- <form>
+    	<div>kk</div>
+    	<div>kk</div>
+    	<div>kk</div>
+    	<div>kk</div>
+    	<div>kk</div>
+    	<div>kk</div>
+    	<div>kk</div>
+    	<div>kk</div>
+    	<div>kk</div>
+    	<div>kk</div>
+    	<div>kk</div>
+    	<div>kk</div>
+    	<div>kk</div>
+    	<div>kk</div>
+    	<div>kk</div>
+    	</form> -->
+    <div class="box" id = "kk" value="2" data-scroll-speed="3">C</div>
+    <div class="box" value="3" data-scroll-speed="6">R</div>
+    <div class="box" value="4" data-scroll-speed="5">O</div>
+    <div class="box" value="5" data-scroll-speed="9">L</div>
+    <div class="box" value="6" data-scroll-speed="15">L</div> 
+  </div>
+</div>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-58d22c749295bca52f487966e382a94a495ac103faca9206cbd160bdf8aedf2a.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+
+var doc = document,
+context = doc.getElementsByClassName('wrapper')[0];
+var instances = [];
+
+$.fn.moveIt = function () {
+    var $window = $(window);
+    
+    $(this).each(function () {
+        instances.push(new moveItItem($(this)));
+    });
+   /*  window.onscroll = function () {
+        var scrollTop =$window.scrollTop();
+        //alert(""+scrollTop);
+        instances.forEach(function (inst) {
+            inst.update(scrollTop);
+            
+        });
+    }; */
+};
+var moveItItem = function (el) {
+    this.el = $(el);
+    alert(this.el.attr('value'));
+    if(this.el.attr('id')!='kk')
+    	this.speed = parseInt(this.el.attr('data-scroll-speed'));
+    else
+    	this.speed = 900;
+};
+moveItItem.prototype.update = function (scrollTop) {
+    var pos = scrollTop / this.speed;
+    this.el.css('transform', 'translateY(' + -pos + 'px)');
+};
+$(function () {
+	
+    $('[data-scroll-speed]').moveIt(); 
+});
+
+function scrollUpdate() {
+	//var instances = [];
+   
+    context.onscroll = function () {
+        var scrollTop =context.scrollTop;
+        instances.forEach(function (inst) {
+            inst.update(scrollTop);
+            
+        });
+    }; 
+}
+
+context.addEventListener('scroll', function () {
+	  window.requestAnimationFrame(scrollUpdate);
+	}, false);
+//# sourceURL=pen.js
+</script>
+</body></html>
