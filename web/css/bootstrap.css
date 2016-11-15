@@ -3176,9 +3176,9 @@ fieldset[disabled] .btn-success.active {
   background-color: #fff;
 }
 .btn-info {
-  color: #fff;
-  background-color: #5bc0de;
-  border-color: #46b8da;
+	color: #fff;
+	background-color: #47A8D8;
+	border-color: #46b8da;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -3554,9 +3554,10 @@ tbody.collapse.in {
 }
 .btn-group,
 .btn-group-vertical {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 0px;
 }
 .btn-group > .btn,
 .btn-group-vertical > .btn {
