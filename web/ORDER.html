@@ -65,7 +65,7 @@
      <div id ="Shopping_Cart" style="width:100%; height:320px; overflow:auto" align="center">
     
    
-<!------ TABLE SORTING javascript -- star -->    
+<!------ TABLE SORTING javascript -- start -->    
     <script type="text/javascript">
 
 function sortingNumber( a , b ){  
@@ -244,10 +244,10 @@ function getTextByClone( tag ){
   <table id="cart" class="sortable" width="100%" border="0">
   	<thead>
     	<tr>
-    		<th class="check" style="text-align:center">체크<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD (0)">▲</button><button class="btn" onclick="reverseTD (0)" style="background-color:#FAF8EE; font-size: 10px; width: 4px; padding-left: 0px;">▼</button></th>
+        <th class="check" style="text-align:center">상태<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="sortTD (0)">▲</button><button class="btn" onclick="reverseTD (0)" style="background-color:#FAF8EE; font-size: 10px; width: 4px; padding-left: 0px;">▼</button></th>
             <th class="name" style="text-align:center">이름<button class="btn" onclick="sortTD(1)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD(1)">▼</button></th>
              <th  class="company" style="text-align:center">회사<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="sortTD(2)">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px"  onclick="reverseTD(2)">▼</button></th>
-			 <th class="number" style="text-align:center">갯수</th>
+			 <th class="number" style="text-align:center">갯수<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="sortTD(3)">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px"  onclick="reverseTD(3)">▼</button></th>
          </tr>
      </thead>
   <tbody>
@@ -591,4 +591,4 @@ function reverseTD( index ){    replace.descending( index );    }
 </script>
 
 </body>
-</html>>
+</html>>>
