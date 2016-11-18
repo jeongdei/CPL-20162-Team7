@@ -35,74 +35,10 @@
       <button type="button" class="alert-warning" style="margin-left:5px" onClick="location='SETTING.html'">설정하기</button>
        </div>
       </ul>
-    </div><br>
+    </div><br>	
     <div align="center">
       <div role="tabpanel">
-        <ul class="nav nav-tabs" role="tablist">
-          <li class="active"><a href="#LIST" data-toggle="tab" role="tab">목록</a></li>
-          <li><a href="#FIX" data-toggle="tab" role="tab">수정</a></li>
-          <li><a href="#DELI" data-toggle="tab" role="tab">배송</a></li>
-          <li><a href="#DIFF" data-toggle="tab" role="tab">차이</a></li>
-        </ul>
-        <div id="tabContent1" class="tab-content">
-          <div class="tab-pane fade in active" id="LIST">
-          <br>
-            <div id ="Odered_list" style="width:100%; height:440px; overflow:auto" align="center">
-            <table id="list" class="sortable" width="100%" border="0">
-  	<thead>
-    	<tr>
-            <th class="name" style="text-align:center">
-            	<a href="index.php?sort=name">이름</a>
-            </th>
-             <th class="company" style="text-align:center">
-            	<a href="index.php?sort=company">회사</a>
-            </th>
-			 <th class="number" style="text-align:center">
-            	<a href="index.php?sort=number">갯수</a>
-            </th>
-         </tr>
-     </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:center">치킨</td>
-      <td style="text-align:center">통큐</td>
-      <td style="text-align:center">100</td>
-    </tr>
-    </tbody>
-    </table>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="FIX">
-          <br>
-            <table id="fix" class="sortable" width="100%" border="0">
-  	<thead>
-    	<tr>
-    		<th class="check" style="text-align:center">
-           		<a style="color:rgba(51,122,183,1.00)">이름</a>
-            </th>
-            <th class="name" style="text-align:center">
-            	<a href="index.php?sort=name">회사</a>
-            </th>
-             <th class="company" style="text-align:center">
-            	<a href="index.php?sort=company">갯수</a>
-            </th>
-			 <th class="number" style="text-align:center">
-            	<a href="index.php?sort=number">수정</a>
-            </th>
-         </tr>
-     </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:center">치킨</td>
-      <td style="text-align:center">통큐</td>
-      <td style="text-align:center"><input type="number" style="width:60px"></td>
-      <td style="text-align:center"><input type="button" class="btn" value="수정하기" style="color:#ffffff; background-color:rgba(255,0,4,1.00)"></td>
-    </tr>
-    </tbody>
-    </table>
-          </div>
-          <div class="tab-pane fade" id="DELI">
-          <br>
+        
             <table id="deli" class="sortable" width="100%" border="0">
   	<thead>
     	<tr>
@@ -125,76 +61,25 @@
       <td style="text-align:center">치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center">100</td>
-      <td style="text-align:center"><input type="button" class="btn" value="도착" style="color:#ffffff; background-color:rgba(255,0,4,1.00)"></td>
+      <td style="text-align:center"><input type="button" class="btn" value="도착" style="color:#ffffff; background-color:rgba(255,0,4,1.00); margin-top:5px"></td>
     </tr>
       <tr>
       <td style="text-align:center">치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center">100</td>
-      <td style="text-align:center"><input type="button" class="btn" value="배송" style="color:#ffffff; background-color:rgba(255,204,0,1.00)"></td>
+      <td style="text-align:center"><input type="button" class="btn" value="배송" style="color:#ffffff; background-color:rgba(255,204,0,1.00); margin-top:5px"></td>
     </tr>
      <tr>
       <td style="text-align:center">치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center">100</td>
-      <td style="text-align:center"><input type="button" class="btn" value="준비" style="color:#ffffff; background-color:rgba(106,234,0,1.00)"></td>
+      <td style="text-align:center"><input type="button" class="btn" value="준비" style="color:#ffffff; background-color:rgba(106,234,0,1.00); margin-top:5px"></td>
     </tr>
     
     </tbody>
     </table>
           </div>
-          <div class="tab-pane fade" id="DIFF">
-            <br>
-            <table id="diff" class="sortable" width="100%" border="0">
-  	<thead>
-    	<tr>
-    		<th class="check" style="text-align:center">
-           		<a style="color:rgba(51,122,183,1.00)">이름</a>
-            </th>
-            <th class="name" style="text-align:center">
-            	<a href="index.php?sort=name">회사</a>
-            </th>
-             <th class="company" style="text-align:center">
-            	<a href="index.php?sort=company">이전</a>
-            </th>
-            <th class="company" style="text-align:center">
-            	<a href="index.php?sort=company">현재</a>
-            </th>
-            
-			 <th class="number" style="text-align:center">
-            	<a href="index.php?sort=number">차이</a>
-            </th>
-         </tr>
-     </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:center">치킨</td>
-      <td style="text-align:center">통큐</td>
-      <td style="text-align:center">100</td>
-      <td style="text-align:center">90</td>
-      <td style="text-align:center"><input type="button" class="btn" value="-10" style="color:rgba(255,0,4,1.00); background-color:rgba(230,155,156,1.00)"></td>
-    </tr>
-      <tr>
-      <td style="text-align:center">치킨</td>
-      <td style="text-align:center">통큐</td>
-      <td style="text-align:center">100</td>
-      <td style="text-align:center">110</td>
-      <td style="text-align:center"><input type="button" class="btn" value="+10" style="color:rgba(3,89,255,1.00); background-color:rgba(230,155,156,1.00)"></td>
-    </tr>
-     <tr>
-      <td style="text-align:center">치킨</td>
-      <td style="text-align:center">통큐</td>
-      <td style="text-align:center">100</td>
-      <td style="text-align:center">100</td>
-      <td style="text-align:center"><input type="button" class="btn" value="0" style="color:#FFFFFF; background-color:rgba(230,155,156,1.00)"></td>
-    </tr>
-    
-    </tbody>
-    </table>
           </div>
-        </div>
-      </div>
-    </div>
     
     <!-- /.navbar-collapse -->
   </div>
