@@ -708,12 +708,12 @@
 
                 var day = _this.selectedDay(d, type);
 
-				var show_shoplist=confirm(day.getDate() + " "+ day.getMonth()+ " "+day.getFullYear());
+				var show_shoplist=confirm(day.getDate() + " "+ day.getMonth()+ " "+day.getFullYear());//창에 띄어주는 내용.
 				if(show_shoplist==true)
 				{
 					 location.href="NewFile.html";
 				}
-                _this.options.onSelected.call(this, 'date', day, $(this).data(MARK_DATA));
+                _this.options.onSelected.call(this, 'date', day, $(this).data(MARK_DATA)); 
 
                 _this.$trigger && _this.hide('date', day, $(this).data(MARK_DATA));
 

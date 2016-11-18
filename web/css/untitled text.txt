@@ -1,8 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script src="js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript">
+<link rel="stylesheet" href="css/bootstrap.css">
+    <style type="text/css">
+      
+		#STATICMENU { margin: 2.5pt; padding: 0pt;  position:absolute; right: 8%; top: 85%; height:30pt; width:23px;'}
+    </style>
+
+<form id="STATICMENU" style="background:#none; z-index:2">
+<img src="icon/console.png" width="35" height="55" onclick="click_test()" alt=""/>
+</form>
+
+    <script type="text/javascript">
  var stmnLEFT = 10; // 오른쪽 여백 
  var stmnGAP1 = 0; // 위쪽 여백 
  var stmnGAP2 = 150; // 스크롤시 브라우저 위쪽과 떨어지는 거리 
@@ -26,6 +32,7 @@
   } 
  function InitializeStaticMenu() {
  // document.getElementById('STATICMENU').style.backgroundColor="#dde8f0"; //크기 보고 싶어서 색 바꿔 놓음 #dde8f0
+  
   document.getElementById('STATICMENU').style.right = stmnLEFT + 'px';  //처음에 오른쪽에 위치. left로 바꿔도.
   document.getElementById('STATICMENU').style.top = document.body.scrollTop + stmnBASE + 'px'; 
   //document.getElementById('STATICMENU').style.backgroundImage = url(icon/test.png);
@@ -42,7 +49,7 @@
 	    btnupdate.setAttribute('id', 'b1');
 	    //btnupdate.setAttribute('type', 'button');
 	    btnupdate.setAttribute('src', 'icon/lace.png');
-	    btnupdate.setAttribute('style','position :relative; right : 5px; bottom :100px ; height:25pt; width:25px; solid : #0000');
+	    btnupdate.setAttribute('style','position :relative; right : 0px; bottom :90px ; height:25pt; width:25px; solid : #0000');
 	    btnupdate.onclick = function() {  alert('test1');  };
 	    obj.appendChild(btnupdate);
 	    
@@ -50,7 +57,7 @@
 	    btnupdate.setAttribute('id', 'b2');
 	    //btnupdate.setAttribute('type', 'button');
 	    btnupdate.setAttribute('src', 'icon/credit-card.png');
-	    btnupdate.setAttribute('style','position :relative; right : 35px; bottom :98px ; height:23pt; width:30px; solid : #0000')
+	    btnupdate.setAttribute('style','position :relative; right : 33px; bottom :99px ; height:23pt; width:30px; solid : #0000')
 	    btnupdate.onclick = function() {  alert('test');  };
 	    obj.appendChild(btnupdate);
 		
@@ -58,7 +65,7 @@
 	    btnupdate.setAttribute('id', 'b3');
 	    //btnupdate.setAttribute('type', 'button');
 	    btnupdate.setAttribute('src', 'icon/delivery-truck.png');
-	    btnupdate.setAttribute('style','position :relative; right :35px; bottom:94px ; height:25pt; width:30px; solid : #0000')
+	    btnupdate.setAttribute('style','position :relative; right :35px; bottom:95px ; height:25pt; width:30px; solid : #0000')
 	    btnupdate.onclick = function() {  alert('test');  };
 	    obj.appendChild(btnupdate); 
 	    
@@ -66,7 +73,7 @@
 	    btnupdate.setAttribute('id', 'b4');
 	    //btnupdate.setAttribute('type', 'button');
 	    btnupdate.setAttribute('src', 'icon/fix.png');
-	    btnupdate.setAttribute('style','position :relative; right :5px; bottom : 95px ; height:25pt; width:25px; solid : #0000')
+	    btnupdate.setAttribute('style','position :relative; right :15px; bottom : 96px ; height:25pt; width:25px; solid : #0000')
 	    btnupdate.onclick = function() {  alert('test');  };
 	    obj.appendChild(btnupdate);
 	    
@@ -75,6 +82,7 @@
 	
 	else if(flag == 1)
 	{
+	
 		var btn = document.getElementById("b1");
 		obj.removeChild(btn);
 		
@@ -95,24 +103,12 @@
 </script>
 
 
-<style type="text/css">
-html,
-body {
-  height: 667px;
-  width : 357px;
-  overflow: hidden;
-}
-#STATICMENU { margin: 10pt; padding: 0pt;  position:absolute; right: 0px; top: 0px; height:30pt; width:23px;'}
-</style>
 
-<meta charset="UTF-8">
-<title>리모컨 테스트</title>
-</head>
-<body onload="InitializeStaticMenu();">
 
-<form id="STATICMENU" style="background:#FFFFFF">
-<img src="icon/console.png" width="35" height="55" onclick="click_test()" alt=""/></form>
 
-</body>
-</html>
+
+
+
+
+
 

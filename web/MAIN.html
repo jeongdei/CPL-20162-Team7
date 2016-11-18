@@ -43,7 +43,7 @@
             outline: none;
         }
 		
-		#STATICMENU { margin: 2.5pt; padding: 0pt;  position:absolute; right: 1.5%; top: 90%; height:30pt; width:23px;'}
+		#STATICMENU { margin: 2.5pt; padding: 0pt;  position:absolute; right: 8%; top: 85%; height:30pt; width:23px;'}
     </style>
 
 <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
@@ -77,8 +77,8 @@
     </div><br>
     <div align="center">
     <button type="button" class="btn btn-primary" style="margin-bottom:5px; width:260px" onClick="location='ORDER.html'">주문 하기</button><br>
-    <button type="button" class="btn btn-info" style="margin-bottom:5px; width:260px" onClick="location='ORDERED.html'">왔던 주문</button><br>
-    <button type="button" class="btn btn-success" style="margin-bottom:5px; width:260px">했던 주문</button><br>
+    <button type="button" class="btn btn-info" style="margin-bottom:5px; width:260px">왔던 주문</button><br>
+    <button type="button" class="btn btn-success" style="margin-bottom:5px; width:260px" onClick="location='ORDERED.html'">했던 주문</button><br>
     <button type="button" class="btn btn-warning" style="margin-bottom:15px; width:260px">내 정보들</button><br>
     </div>
 <div class="wall" align="center">
@@ -133,7 +133,7 @@
     <script language="javascript"> </script>
 </div>
     <!-- /.navbar-collapse -->
-<form id="STATICMENU" style="background:#E69B9C">
+<form id="STATICMENU" style="background:#E69B9C; z-index:2">
 <img src="icon/console.png" width="35" height="55" onclick="click_test()" alt=""/>
 </form>
 
@@ -177,7 +177,7 @@
 	    btnupdate.setAttribute('id', 'b1');
 	    //btnupdate.setAttribute('type', 'button');
 	    btnupdate.setAttribute('src', 'icon/lace.png');
-	    btnupdate.setAttribute('style','position :relative; right : 5px; bottom :100px ; height:25pt; width:25px; solid : #0000');
+	    btnupdate.setAttribute('style','position :relative; right : 0px; bottom :90px ; height:25pt; width:25px; solid : #0000');
 	    btnupdate.onclick = function() {  alert('test1');  };
 	    obj.appendChild(btnupdate);
 	    
@@ -185,7 +185,7 @@
 	    btnupdate.setAttribute('id', 'b2');
 	    //btnupdate.setAttribute('type', 'button');
 	    btnupdate.setAttribute('src', 'icon/credit-card.png');
-	    btnupdate.setAttribute('style','position :relative; right : 35px; bottom :98px ; height:23pt; width:30px; solid : #0000')
+	    btnupdate.setAttribute('style','position :relative; right : 33px; bottom :99px ; height:23pt; width:30px; solid : #0000')
 	    btnupdate.onclick = function() {  alert('test');  };
 	    obj.appendChild(btnupdate);
 		
@@ -193,7 +193,7 @@
 	    btnupdate.setAttribute('id', 'b3');
 	    //btnupdate.setAttribute('type', 'button');
 	    btnupdate.setAttribute('src', 'icon/delivery-truck.png');
-	    btnupdate.setAttribute('style','position :relative; right :35px; bottom:94px ; height:25pt; width:30px; solid : #0000')
+	    btnupdate.setAttribute('style','position :relative; right :35px; bottom:95px ; height:25pt; width:30px; solid : #0000')
 	    btnupdate.onclick = function() {  alert('test');  };
 	    obj.appendChild(btnupdate); 
 	    
@@ -201,7 +201,7 @@
 	    btnupdate.setAttribute('id', 'b4');
 	    //btnupdate.setAttribute('type', 'button');
 	    btnupdate.setAttribute('src', 'icon/fix.png');
-	    btnupdate.setAttribute('style','position :relative; right :5px; bottom : 95px ; height:25pt; width:25px; solid : #0000')
+	    btnupdate.setAttribute('style','position :relative; right :15px; bottom : 96px ; height:25pt; width:25px; solid : #0000')
 	    btnupdate.onclick = function() {  alert('test');  };
 	    obj.appendChild(btnupdate);
 	    

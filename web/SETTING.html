@@ -5,6 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, webkit">
 <title>Untitled Document</title>
+
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/calendar.css">
     <style type="text/css">
@@ -42,6 +43,9 @@
             border: 1px solid #ccc;
             outline: none;
         }
+		
+		#STATICMENU { margin: 2.5pt; padding: 0pt;  position:absolute; right: 8%; top: 85%; height:30pt; width:23px;'}
+    
     </style>
 
 <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
@@ -155,8 +159,9 @@
     <br>
     
     </div>
+    
 <div class="wall" align="center">
-  <div id="ca"></div>
+<div id="ca" style="z-index:1"></div>
     <script src="calendar.js"></script>
     <script>
         var now = new Date();
@@ -170,8 +175,8 @@
         // inline
         var $ca = $('#ca').calendar({
             // view: 'month',
-            width: 320,
-            height: 320,
+            width: 300,
+            height: 300,
             // startWeek: 0,
             // selectedRang: [new Date(), null],
             data: data,
@@ -208,8 +213,111 @@
 </div>
   <!-- /.navbar-collapse -->
   <!-- /.container-fluid -->
+ 
 </nav>
+ <form id="STATICMENU" style="background:#none; z-index:2" >
+<img src="icon/console.png" width="35" height="55" onclick="click_test()" alt=""/>
+</form>
+  <script type="text/javascript">
+ var stmnLEFT = 10; // 오른쪽 여백 
+ var stmnGAP1 = 0; // 위쪽 여백 
+ var stmnGAP2 = 150; // 스크롤시 브라우저 위쪽과 떨어지는 거리 
+ var stmnBASE = 150; // 스크롤 시작위치 
+ var stmnActivateSpeed = 35; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
+ var stmnScrollSpeed = 20; //스크롤 속도 (클수록 느림)
+ var stmnTimer; 
+ var flag = 0;
+ 
+ function RefreshStaticMenu() { 
+  var stmnStartPoint, stmnEndPoint; 
+  stmnStartPoint = parseInt(document.getElementById('STATICMENU').style.top, 10); 
+  stmnEndPoint = Math.max(document.documentElement.scrollTop, document.body.scrollTop) + stmnGAP2; 
+  if (stmnEndPoint < stmnGAP1) stmnEndPoint = stmnGAP1; 
+  if (stmnStartPoint != stmnEndPoint) { 
+   stmnScrollAmount = Math.ceil( Math.abs( stmnEndPoint - stmnStartPoint ) / 15 ); 
+   document.getElementById('STATICMENU').style.top = parseInt(document.getElementById('STATICMENU').style.top, 10) + ( ( stmnEndPoint<stmnStartPoint ) ? -stmnScrollAmount : stmnScrollAmount ) + 'px'; 
+   stmnRefreshTimer = stmnScrollSpeed; 
+   }
+  stmnTimer = setTimeout("RefreshStaticMenu();", stmnActivateSpeed); 
+  } 
+ function InitializeStaticMenu() {
+ // document.getElementById('STATICMENU').style.backgroundColor="#dde8f0"; //크기 보고 싶어서 색 바꿔 놓음 #dde8f0
+  
+  document.getElementById('STATICMENU').style.right = stmnLEFT + 'px';  //처음에 오른쪽에 위치. left로 바꿔도.
+  document.getElementById('STATICMENU').style.top = document.body.scrollTop + stmnBASE + 'px'; 
+  //document.getElementById('STATICMENU').style.backgroundImage = url(icon/test.png);
+  RefreshStaticMenu();
+  }
+ 
+ function click_test(){
+	var obj = document.getElementById('STATICMENU');
+	 
+	if(flag == 0)
+	{
+		
+		var btnupdate = document.createElement('img');
+	    btnupdate.setAttribute('id', 'b1');
+	    //btnupdate.setAttribute('type', 'button');
+	    btnupdate.setAttribute('src', 'icon/lace.png');
+	    btnupdate.setAttribute('style','position :relative; right : 0px; bottom :90px ; height:25pt; width:25px; solid : #0000');
+	    btnupdate.onclick = function() {  alert('test1');  };
+	    obj.appendChild(btnupdate);
+	    
+	    var btnupdate = document.createElement('img');
+	    btnupdate.setAttribute('id', 'b2');
+	    //btnupdate.setAttribute('type', 'button');
+	    btnupdate.setAttribute('src', 'icon/credit-card.png');
+	    btnupdate.setAttribute('style','position :relative; right : 33px; bottom :99px ; height:23pt; width:30px; solid : #0000')
+	    btnupdate.onclick = function() {  alert('test');  };
+	    obj.appendChild(btnupdate);
+		
+		 var btnupdate = document.createElement('img');
+	    btnupdate.setAttribute('id', 'b3');
+	    //btnupdate.setAttribute('type', 'button');
+	    btnupdate.setAttribute('src', 'icon/delivery-truck.png');
+	    btnupdate.setAttribute('style','position :relative; right :35px; bottom:95px ; height:25pt; width:30px; solid : #0000')
+	    btnupdate.onclick = function() {  alert('test');  };
+	    obj.appendChild(btnupdate); 
+	    
+	    var btnupdate = document.createElement('img');
+	    btnupdate.setAttribute('id', 'b4');
+	    //btnupdate.setAttribute('type', 'button');
+	    btnupdate.setAttribute('src', 'icon/fix.png');
+	    btnupdate.setAttribute('style','position :relative; right :15px; bottom : 96px ; height:25pt; width:25px; solid : #0000')
+	    btnupdate.onclick = function() {  alert('test');  };
+	    obj.appendChild(btnupdate);
+	    
+	    flag = 1;
+	}
+	
+	else if(flag == 1)
+	{
+	
+		var btn = document.getElementById("b1");
+		obj.removeChild(btn);
+		
+		var btn = document.getElementById("b2");
+		obj.removeChild(btn);
+		
+		var btn = document.getElementById("b3");
+		obj.removeChild(btn);
+		
+		var btn = document.getElementById("b4");
+		obj.removeChild(btn);
+		
+		flag = 0;
+	}
+	
+	
+ }
+</script>
+
+
+
+ 
+
+
 <footer class="footer" id="footer" align="right" style="color:#FFFFFF; margin-right:10px">Three J Two K company</footer>
-<script src="js/bootstrap.js" type="text/javascript"></script>
+<!--- <script src="js/bootstrap.js" type="text/javascript"></script>   ----->
 </body>
 </html>
