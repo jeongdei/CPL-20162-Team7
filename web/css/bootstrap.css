@@ -3558,6 +3558,8 @@ tbody.collapse.in {
 	display: inline-block;
 	vertical-align: middle;
 	padding-left: 0px;
+	margin-right: 41px;
+	margin-top: 10px;
 }
 .btn-group > .btn,
 .btn-group-vertical > .btn {
@@ -4493,7 +4495,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #ccc;
 }
 .navbar-inverse {
-	background-color: #E69B9C;
+	background-color:#FAF8EE;
 	border-color: #080808;
 }
 .navbar-inverse .navbar-brand {
@@ -4658,11 +4660,11 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  z-index: 2;
-  color: #fff;
-  cursor: default;
-  background-color: #337ab7;
-  border-color: #337ab7;
+	z-index: 2;
+	color: #080924;
+	cursor: default;
+	background-color: #337ab7;
+	border-color: #337ab7;
 }
 .pagination > .disabled > span,
 .pagination > .disabled > span:hover,
