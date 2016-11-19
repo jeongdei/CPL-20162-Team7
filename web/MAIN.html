@@ -79,7 +79,7 @@
     <div align="center">
     <button type="button" class="btn btn-primary" style="margin-bottom:5px; width:260px" onClick="location='ORDER.html'">주문 하기</button><br>
     <button type="button" class="btn btn-info" style="margin-bottom:5px; width:260px" onClick="location='ORDER_LIST.html'">왔던 주문</button><br>
-    <button type="button" class="btn btn-warning" style="margin-bottom:15px; width:260px" onClick="location='INVERNTORY.html'">내 정보들</button><br>
+    <button type="button" class="btn btn-warning" style="margin-bottom:15px; width:260px" onClick="location='INVENTORY.html'">내 정보들</button><br>
     </div>
 <div class="wall" align="center">
   <div id="ca"></div>
@@ -106,6 +106,7 @@
                 console.log('view:' + view)
                 console.log('date:' + date)
                 console.log('data:' + (data || '无'));
+				
             },
             viewChange: function(view, y, m) {
                 console.log(view, y, m)
@@ -121,6 +122,9 @@
             data: data,
             onSelected: function(view, date, data) {
                 console.log('event: onSelected')
+				var btnupdate = document.createElement('button');
+	    btnupdate.setAttribute('id', 'go_CAL_ORDER');
+		btnupdate.serAttribute('onClick',location='CAL_ORDER.html');
             },
             onClose: function(view, date, data) {
                 console.log('event: onClose')
