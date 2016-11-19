@@ -77,27 +77,24 @@
           <br>
             <div id ="Odered_list" style="width:100%; height:440px; overflow:auto" align="center">
             <table id="list" class="sortable" width="100%" border="0">
-  	<thead>
-    	<tr>
-            <th class="name" style="text-align:center">
-            	<a href="index.php?sort=name">이름</a>
-            </th>
-             <th class="company" style="text-align:center">
-            	<a href="index.php?sort=company">회사</a>
-            </th>
-			 <th class="number" style="text-align:center">
-            	<a href="index.php?sort=number">갯수</a>
-            </th>
-         </tr>
-     </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:center">치킨</td>
-      <td style="text-align:center">통큐</td>
-      <td style="text-align:center">100</td>
-    </tr>
-    </tbody>
-    </table>
+								<thead>
+									<tr>
+										<th class="name" style="text-align: center"><a
+											href="index.php?sort=name">이름</a></th>
+										<th class="company" style="text-align: center"><a
+											href="index.php?sort=company">회사</a></th>
+										<th class="number" style="text-align: center"><a
+											href="index.php?sort=number">갯수</a></th>
+									</tr>
+								</thead>
+								<tbody id=table_body>
+									<tr>
+										<td style="text-align: center">치킨</td>
+										<td style="text-align: center">통큐</td>
+										<td style="text-align: center">100</td>
+									</tr>
+								</tbody>
+							</table>
             </div>
           </div>
           
