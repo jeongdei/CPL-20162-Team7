@@ -1,0 +1,236 @@
+package util.dbhelper;
+
+import util.dbhelper.DBconn;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+
+public class Favplus {
+	
+	int i = 0;
+	int count = 0;
+	int item_id = 0;
+	int bookmark_id = 0;
+	int flag = 0;
+	int page_check=0;
+
+	
+	
+//	request.setCharacterEncoding("UTF-8"); 
+//	String item_name = request.getParameter("item_name");
+//	String item_count = request.getParameter("item_count");
+//	String bookmark_name = request.getParameter("bookmark_name");
+	
+	String item_name;
+	String item_count;
+	String bookmark_name;
+	String item_name1;
+	
+	Statement st = null;
+	String sql = null;
+	ResultSet rs = null;
+	Connection conn; // DBconn.getConnection();
+	
+	public void set(String n, String c, String b, String submit)
+	{
+		item_name=n;
+		item_count = c;
+		bookmark_name = b;
+		item_name1 = submit;
+		try {
+			conn = DBconn.getConnection();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	public void execute()
+	{
+	String Array_name[] = new String[0];
+	int Array_price[] = new int[0];
+	int Array_count[] = new int[0];
+	String Array_bookmark[] = new String[0];
+
+//	String item_name1 = request.getParameter("submit");
+//	
+//	System.out.println(item_name1);
+
+	
+	if(item_name1!=null)
+	{
+		
+//		System.out.println("1"+item_name);
+		if(item_name!=null && item_name.compareTo("")!=0)
+		{
+		try {
+			st = conn.createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		sql = "select bookmark_id from bookmark where bookmark_name='" + bookmark_name + "'";
+		try {
+			rs = st.executeQuery(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			if (rs.next()) {
+				bookmark_id = rs.getInt("bookmark_id");
+				flag = 1;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if (flag == 0) {
+			String sql1 = null;
+			sql1 = "insert into bookmark values(0,'" + bookmark_name + "',0)";
+			try {
+				st.executeUpdate(sql1);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			sql1 = "select bookmark_id from bookmark where bookmark_name='" + bookmark_name + "'";
+			try {
+				rs = st.executeQuery(sql1);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				if (rs.next()) {
+					bookmark_id = rs.getInt("bookmark_id");
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+
+		try {
+			st = conn.createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(item_name);
+		sql = "select id from item where name='" + item_name + "'";
+		try {
+			rs = st.executeQuery(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			if (rs.next()) {
+				System.out.println(rs.getInt("id"));
+				item_id = rs.getInt("id");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		try {
+			st = conn.createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		sql = "insert into favorite values(" + bookmark_id + "," + item_id + "," + item_count+")";
+		try {
+			st.executeUpdate(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		/* bookmark_name = null;
+		item_name= null;
+		item_count= null;
+		 */
+		
+		try {
+			st = conn.createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		sql = "select count(*) as count from item i, favorite f, bookmark b where f.bookmark_id = "
+				+ bookmark_id + " and f.item_id = i.id and b.bookmark_id=f.bookmark_id";
+		try {
+			rs = st.executeQuery(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			if (rs.next()) {
+				count = rs.getInt("count");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Array_name = new String[count];
+		Array_price = new int[count];
+		Array_count = new int[count];
+		Array_bookmark = new String[count];
+
+		try {
+			st = conn.createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		sql = "select i.name,i.price, f.count, b.bookmark_name from item i, favorite f, bookmark b where f.bookmark_id = "
+				+ bookmark_id + " and f.item_id = i.id and b.bookmark_id=f.bookmark_id";
+		try {
+			rs = st.executeQuery(sql);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			while (rs.next()) {
+				Array_name[i] = rs.getString("name");
+				Array_price[i] = rs.getInt("price");
+				Array_count[i] = rs.getInt("count");
+				Array_bookmark[i] = rs.getString("bookmark_name");
+				i++;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try {
+			st.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		}
+	
+		
+
+	}
+	}
+	
+}
