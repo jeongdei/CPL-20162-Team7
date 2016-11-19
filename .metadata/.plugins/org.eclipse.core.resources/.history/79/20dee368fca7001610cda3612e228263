@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>scroll</title>
+
+<script type="text/javascript">
+ var stmnLEFT = 10; // 오른쪽 여백 
+ var stmnGAP1 = 0; // 위쪽 여백 
+ var stmnGAP2 = 150; // 스크롤시 브라우저 위쪽과 떨어지는 거리 
+ var stmnBASE = 150; // 스크롤 시작위치 
+ var stmnActivateSpeed = 35; //스크롤을 인식하는 딜레이 (숫자가 클수록 느리게 인식)
+ var stmnScrollSpeed=25; //스크롤 속도 (클수록 느림)
+ var stmnTimer; 
+ var flag = 0;
+ var click_count = 3;
+ 
+ 
+  	function speed_up()
+ 	{
+		 if(click_count!=5)
+		 {
+			 click_count++;
+			 speed_set(count);
+		 }
+ 	}
+ 
+ 	function speed_down()
+ 	{
+		 if(click_count!=0)
+		 {
+			 click_count--;
+			 speed_set(count);
+		 }
+			
+	}
+ 
+ 	function speed_set(int count)
+ 	{
+	 	stmnScrollSpeed=stmnScrollSpeed/(1.5*count);
+ 	}
+ 
+ function RefreshStaticMenu() { 
+  var stmnStartPoint, stmnEndPoint; 
+  stmnStartPoint = parseInt(document.getElementById('STATICMENU').style.top, 10); 
+  stmnEndPoint = Math.max(document.documentElement.scrollTop, document.body.scrollTop) + stmnGAP2; 
+  if (stmnEndPoint < stmnGAP1) stmnEndPoint = stmnGAP1; 
+  if (stmnStartPoint != stmnEndPoint) { 
+   stmnScrollAmount = Math.ceil( Math.abs( stmnEndPoint - stmnStartPoint ) / 15 ); 
+   document.getElementById('Button_base').style.top = parseInt(document.getElementById('STATICMENU').style.top, 10) + ( ( stmnEndPoint<stmnStartPoint ) ? -stmnScrollAmount : stmnScrollAmount ) + 'px'; 
+   stmnRefreshTimer = stmnScrollSpeed; 
+   }
+  stmnTimer = setTimeout("RefreshStaticMenu();", stmnActivateSpeed); 
+  } 
+
+ 
+	
+	
+ }
+</script>
+
+</head>
+
+<style type="text/css">
+#Button_base{ margin: 0pt; padding: 0pt;  position:static; right: 0px; top: 0px; height:30pt;}
+</style>
+
+<body onload="RefreshMenu();">
+<div id = Button_base>
+<form>
+<input type ='button' value = '▲' onclick='speed_up()' 
+	style = "border : 10px; solid : #0000; border-radius : 4px; height:12pt; width : 18pt;">
+<input type ='button' value = '▼' onclick='speed_up()' 
+	style = "border : 10px; solid : #0000; border-radius : 4px; height:12pt; width : 18pt;">	
+</form>
+</div>
+</body>
+</html>
