@@ -262,10 +262,7 @@
 	
 	st = conn.createStatement();
 	
-	//여기 고칠 것!!!!!!
-	sql = "select  from remote_state";
-	st.executeUpdate(sql);
-	st.close();
+	
 	
 %>
   </div>
