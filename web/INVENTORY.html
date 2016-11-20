@@ -218,15 +218,17 @@ function getTextByClone( tag ){
         return textContent; 
 } 
 </script>
-  	  <br>
-      <div><label>내가 가진 물건들</label></div>
+      <div>
+      <label style="margin-bottom:15px">내가 가진 물건들</label>
+      </div>
       <table id="cart" class="sortable" style="width:100%; height:320px; overflow:auto; " border="0"  align="center">
   	<thead>
     	<tr>
             <th class="name" style="text-align:center">이름<button class="btn" onclick="sortTD(0)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD(0)">▼</button></th>
              <th  class="company" style="text-align:center">회사<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="sortTD(1)">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px"  onclick="reverseTD(1)">▼</button></th>
-			 <th class="number" style="text-align:center">갯수<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="sortTD(2)">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px"  onclick="reverseTD(2)">▼</button></th>
-             <th class="button" style="text-align:center; width:100px"></th>
+			 <th class="number" style="text-align:center">들어온 갯수<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="sortTD(2)">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px"  onclick="reverseTD(2)">▼</button></th>
+              <th class="number" style="text-align:center">보유 갯수<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="sortTD(3)">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px"  onclick="reverseTD(3)">▼</button></th>
+             <th class="button" style="text-align:center; width:60px"></th>
          </tr>
      </thead>
   <tbody >
@@ -234,167 +236,98 @@ function getTextByClone( tag ){
       <td style="text-align:center">땅땅치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center"><input type="number" style="width:60px"></td>
-      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:100px; color:#fff">+Box</button></td>
+      <td style="text-align:center"><input type="number" style="width:60px"></td>
+      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
     </tr>
     <tr>
       <td style="text-align:center">치킨</td>
       <td style="text-align:center">땡큐통큐</td>
       <td style="text-align:center"><input type="number" style="width:60px"></td>
-      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:100px; color:#fff">+Box</button></td>
+      <td style="text-align:center"><input type="number" style="width:60px"></td>
+      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
     </tr>
     <tr>
       <td style="text-align:center">교촌치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center"><input type="number" style="width:60px"></td>
-      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:100px; color:#fff">+Box</button></td>
+      <td style="text-align:center"><input type="number" style="width:60px"></td>
+      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
     </tr>
     <tr>
       <td style="text-align:center">치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center"><input type="number" style="width:60px"></td>
-      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:100px; color:#fff">+Box</button></td>
+      <td style="text-align:center"><input type="number" style="width:60px"></td>
+      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
     </tr>
     <tr>
       <td style="text-align:center">치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center"><input type="number" style="width:60px"></td>
-      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:100px; color:#fff">+Box</button></td>
+      <td style="text-align:center"><input type="number" style="width:60px"></td>
+      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
     </tr>
     <tr>
       <td style="text-align:center">치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center"><input type="number" style="width:60px"></td>
-      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:100px; color:#fff">+Box</button></td>
+      <td style="text-align:center"><input type="number" style="width:60px"></td>
+      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
     </tr>
     <tr>
       <td style="text-align:center">치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center"><input type="number" style="width:60px"></td>
-      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:100px; color:#fff">+Box</button></td>
+      <td style="text-align:center"><input type="number" style="width:60px"></td>
+      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
     </tr>
     <tr>
       <td style="text-align:center">치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center"><input type="number" style="width:60px"></td>
-      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:100px; color:#fff">+Box</button></td>
+      <td style="text-align:center"><input type="number" style="width:60px"></td>
+      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
     </tr>
     <tr>
       <td style="text-align:center">치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center"><input type="number" style="width:60px"></td>
-      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:100px; color:#fff">+Box</button></td>
+      <td style="text-align:center"><input type="number" style="width:60px"></td>
+      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
     </tr>
     <tr>
       <td style="text-align:center">치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center"><input type="number" style="width:60px"></td>
-      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:100px; color:#fff">+Box</button></td>
+      <td style="text-align:center"><input type="number" style="width:60px"></td>
+      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
     </tr>
     
     <tr>
       <td style="text-align:center">치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center"><input type="number" style="width:60px"></td>
-      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:100px; color:#fff">+Box</button></td>
+      <td style="text-align:center"><input type="number" style="width:60px"></td>
+      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
     </tr>
     <tr>
       <td style="text-align:center">치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center"><input type="number" style="width:60px"></td>
-      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:100px; color:#fff">+Box</button></td>
+      <td style="text-align:center"><input type="number" style="width:60px"></td>
+      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
     </tr>
     <tr>
       <td style="text-align:center">치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center"><input type="number" style="width:60px"></td>
-      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:100px; color:#fff">+Box</button></td>
+      <td style="text-align:center"><input type="number" style="width:60px"></td>
+      <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
     </tr>
     
   </tbody>
 </table>
   </div>
-    <br><br>
-    <div align="center"><label>주문 들어온 물건들</label></div>
-    <div id ="Shopping_Cart2" style="width:100%; height:320px; overflow:auto" align="center">
-     
-      <table id="cart2" class="sortable" width="100%" border="0">
-        <thead>
-          <tr>
-            <th class="name" style="text-align:center">이름
-              <button class="btn" onclick="sortTD2(0)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button>
-              <button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD2(0)">▼</button></th>
-            <th  class="company" style="text-align:center">회사
-              <button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="sortTD2(1)">▲</button>
-              <button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px"  onclick="reverseTD2(1)">▼</button></th>
-            <th class="number" style="text-align:center">갯수
-              <button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="sortTD2(2)">▲</button>
-            <button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px"  onclick="reverseTD2(2)">▼</button></th>
-          </tr>
-        </thead>
-        <tbody>
-           <tr>
-          <td style="text-align:center">치킨</td>
-          <td style="text-align:center">통큐</td>
-          <td style="text-align:center"><input type="number" style="width:60px"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center">치킨</td>
-          <td style="text-align:center">통큐</td>
-          <td style="text-align:center"><input type="number" style="width:60px"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center">치킨</td>
-          <td style="text-align:center">통큐</td>
-          <td style="text-align:center"><input type="number" style="width:60px"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center">치킨</td>
-          <td style="text-align:center">통큐</td>
-          <td style="text-align:center"><input type="number" style="width:60px"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center">치킨</td>
-          <td style="text-align:center">통큐</td>
-          <td style="text-align:center"><input type="number" style="width:60px"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center">치킨</td>
-          <td style="text-align:center">통큐</td>
-          <td style="text-align:center"><input type="number" style="width:60px"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center">땅땅치킨</td>
-          <td style="text-align:center">통큐</td>
-          <td style="text-align:center"><input type="number" style="width:60px"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center">땅땅치킨</td>
-          <td style="text-align:center">통큐</td>
-          <td style="text-align:center"><input type="number" style="width:60px"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center">땅땅치킨</td>
-          <td style="text-align:center">통큐</td>
-          <td style="text-align:center"><input type="number" style="width:60px"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center">땅땅치킨</td>
-          <td style="text-align:center">통큐</td>
-          <td style="text-align:center"><input type="number" style="width:60px"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center">땅땅치킨</td>
-          <td style="text-align:center">통큐</td>
-          <td style="text-align:center"><input type="number" style="width:60px"></td>
-        </tr>
-        <tr>
-          <td style="text-align:center">교촌치킨</td>
-          <td style="text-align:center">통큐</td>
-          <td style="text-align:center"><input type="number" style="width:60px"></td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
     <br>
      <!--Chart-box-->    
     
