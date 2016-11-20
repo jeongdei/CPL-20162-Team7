@@ -65,7 +65,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header" style="background-color: #69bd8d; border-color: #69bd8d;" >
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#inverseNavbar1" style="border-color:#fff; background-color:#69bd8d; column-rule-color:#69bd8d;"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-      <a class="navbar-brand" href="#" style="color:#fff; font-size:24px; text-align:center; margin-left:20px" onClick="location='MAIN.html'">전김강정조</a></div>
+      <a class="navbar-brand" href="#" style="color: #fff; font-size: 24px; text-align: center; margin-left: 20px;" onClick="location='MAIN.html'">전김강정조</a></div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="inverseNavbar1" align="center" style="background-color: #69BD8D; border-color: #FAF8EE; margin-top: -6px;">
       <ul class="nav navbar-nav navbar-right" style="border-color: #FAF8EE; color: #69bd8d; margin-bottom: 12px;">
@@ -77,10 +77,9 @@
       </ul>
 </div><br>
     <div align="center">
-    <button type="button" class="btn btn-primary" style="margin-bottom:5px; width:260px" onClick="location='ORDER.jsp'">주문 하기</button><br>
-    <button type="button" class="btn btn-info" style="margin-bottom:5px; width:260px">왔던 주문</button><br>
-    <button type="button" class="btn btn-success" style="margin-bottom:5px; width:260px">했던 주문</button><br>
-    <button type="button" class="btn btn-warning" style="margin-bottom:15px; width:260px">내 정보들</button><br>
+    <button type="button" class="btn btn-primary" style="margin-bottom:5px; width:260px" onClick="location='ORDER.html'">주문 하기</button><br>
+    <button type="button" class="btn btn-info" style="margin-bottom:5px; width:260px" onClick="location='ORDER_LIST.html'">왔던 주문</button><br>
+    <button type="button" class="btn btn-warning" style="margin-bottom:15px; width:260px" onClick="location='INVENTORY.html'">내 정보들</button><br>
     </div>
 <div class="wall" align="center">
   <div id="ca"></div>
@@ -107,6 +106,7 @@
                 console.log('view:' + view)
                 console.log('date:' + date)
                 console.log('data:' + (data || '无'));
+				
             },
             viewChange: function(view, y, m) {
                 console.log(view, y, m)
@@ -122,6 +122,9 @@
             data: data,
             onSelected: function(view, date, data) {
                 console.log('event: onSelected')
+				var btnupdate = document.createElement('button');
+	    btnupdate.setAttribute('id', 'go_CAL_ORDER');
+		btnupdate.serAttribute('onClick',location='CAL_ORDER.html');
             },
             onClose: function(view, date, data) {
                 console.log('event: onClose')
@@ -138,7 +141,7 @@
 <img src="icon/console.png" width="35" height="55" onclick="click_test()" alt=""/>
 </form>
 
-<script type="text/javascript">
+    <script type="text/javascript">
  var stmnLEFT = 10; // 오른쪽 여백 
  var stmnGAP1 = 0; // 위쪽 여백 
  var stmnGAP2 = 150; // 스크롤시 브라우저 위쪽과 떨어지는 거리 
