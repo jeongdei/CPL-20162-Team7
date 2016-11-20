@@ -33,21 +33,25 @@
       <div class="btn-group" role="group">
       <button type="button" class="alert-info" style="margin-right:5px">속도UP</button>
       <button type="button" class="alert-warning" style="margin-left:5px" onClick="location='SETTING.html'">설정하기</button>
-      <button type="button" class="alert-success" style="margin-left:5px; background-color:#e9e4f0; border-color:#b9b5bf; color:#7129d3" onClick="location='ORDERED.html'">배송보기</button>
+      <!-- <button type="button" class="alert-success" style="margin-left:5px; background-color:#e9e4f0; border-color:#b9b5bf; color:#7129d3" onClick="location='ORDERED.html'">배송보기</button> -->
        </div>
       </ul>
 </div>
 <br>
 
     <!-- /.navbar-collapse -->
-    
+    <div align="left" style="margin-left:20px">
+  <strong><label>쇼핑 아이탬 검색</label></strong><br>
+  </div>
      <div align="center">
     <input type="search"/>
     <strong>
-    <button class="btn" style="color:#8A6C3B; background-color:#FAF8EE; font-size:20px" onClick="location='ITEM_INFO.html'">검색하기</button>
+    <button class="btn" style="color:#8A6C3B; background-color:#FAF8EE; font-size:15px" onClick="location='ITEM_INFO.html'">검색하기</button>
     </strong><br><br>
     </div>
-    
+    <div align="left" style="margin-left:20px">
+    <strong><label>즐겨찾기</label></strong><br>
+    </div>
     <span style="text-align:center">
     <button class="glyphicon glyphicon-star" aria-hidden="true" style="color:#FFD500; background-color:#FAF8EE; border:hidden; width:10%; text-align:center" onClick="location='FAVORITE.html'"></button>
     <button type="button" class="btn btn-info" draggable="true" style="width:30%; text-align:center">1</button>
@@ -58,9 +62,13 @@
     </span>
   <!------- ---->
   <hr>
+  <div align="left" style="margin-left:20px">
+  <strong><label>쇼핑 리스트 내역</label></strong><br>
+  </div>
     <div align="center">
-    <input type="search"/><strong>
-    <button class="btn" style="color:#8A6C3B; background-color:#FAF8EE; font-size:20px; margin-bottom:8px" onClick="location='ACCEPT_1.html'">주문하기</button></strong><br>
+    <input type="search"/>
+      <strong><button class="btn" style="color:#8A6C3B; background-color:#FAF8EE; font-size:15px; margin-bottom:8px" onClick="ITEM_INFO.html">검색하기</button></strong>
+    <strong><button class="btn" style="color:#8A6C3B; background-color:#FAF8EE; font-size:15px; margin-bottom:8px" onClick="location='ACCEPT_1.html'">결재하기</button></strong><br>
     </div>
      <div id ="Shopping_Cart" style="width:100%; height:320px; overflow:auto" align="center">
     
