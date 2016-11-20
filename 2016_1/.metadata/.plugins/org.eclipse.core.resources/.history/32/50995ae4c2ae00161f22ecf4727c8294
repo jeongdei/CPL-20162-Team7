@@ -95,7 +95,7 @@
 <img src="icon/console.png" width="35" height="55" onclick="click_test()" alt=""/>
 </form>
 
-<script type="text/javascript">
+    <script type="text/javascript">
  var stmnLEFT = 10; // 오른쪽 여백 
  var stmnGAP1 = 0; // 위쪽 여백 
  var stmnGAP2 = 150; // 스크롤시 브라우저 위쪽과 떨어지는 거리 

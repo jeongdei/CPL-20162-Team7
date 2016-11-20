@@ -1,3 +1,8 @@
+<%@page import="util.dbhelper.DBconn"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html>
 <head>
@@ -5,10 +10,50 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, webkit">
 <title>Untitled Document</title>
-<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/calendar.css">
     <style type="text/css">
+        
+		html {
+            font: 500 10px "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #333;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        ul,
+        ol,
+        li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #demo {
+            width: 300px;
+            margin: 30px auto;
+        }
+        
+        p {
+            margin: 0;
+        }
+        
+        input {
+            margin: 30px auto;
+            height: 28px;
+            width: 200px;
+            padding: 0 6px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+		
 		#STATICMENU { margin: 2.5pt; padding: 0pt;  position:absolute; right: 8%; top: 85%; height:30pt; width:23px;'}
     </style>
+
+<script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="js/calendar.js"></script>
+
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -25,7 +70,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header" style="background-color: #69bd8d; border-color: #69bd8d;" >
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#inverseNavbar1" style="border-color:#fff; background-color:#69bd8d; column-rule-color:#69bd8d;"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-       <a class="navbar-brand" href="#" style="color:#fff; font-size:24px; text-align:center; margin-left:20px; margin-top:-3px" onClick="location='MAIN.html'"><span class="glyphicon glyphicon-credit-card" aria-hidden="true" style="margin-right:-10px">&nbsp;</span>주문으로...</a></div>
+      <a class="navbar-brand" href="#" style="color:#fff; font-size:24px; text-align:center; margin-left:20px" onClick="location='MAIN.html'">전김강정조</a></div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="inverseNavbar1" align="center" style="background-color: #69BD8D; border-color: #FAF8EE; margin-top: -6px;">
       <ul class="nav navbar-nav navbar-right" style="border-color: #FAF8EE; color: #69bd8d; margin-bottom: 12px;">
@@ -35,63 +80,66 @@
       <button type="button" class="alert-success" style="margin-left:5px; background-color:#e9e4f0; border-color:#b9b5bf; color:#7129d3" onClick="location='ORDERED.html'">배송보기</button>
        </div>
       </ul>
-</div>
-<br>
-
-
-  <div align="center">
-    
-    <div>
-      <div class="input-group"><span class="input-group-addon">즐겨찾기 이름</span>
-        <input type="text" class="form-control" placeholder="Write favorite group">
-        <span class="input-group-addon" style="background-color:rgba(217,83,79,1.00)">
-        <button type="button" class="btn btn-danger" 
->삭제</button>
-        </span></div>
-        <hr>
-        <div>
+</div><br>
     <div align="center">
-    <input type="search" placeholder="즐겨찾기 이름" style="text-align:center"/>
-    <button class="btn"  style="color:#ffffff; background-color:#BD934E; border-bottom-color:rgba(230,155,156,1.00)">검색하기</button><br>
+    <button type="button" class="btn btn-primary" style="margin-bottom:5px; width:260px" onClick="location='ORDER.jsp'">주문 하기</button><br>
+    <button type="button" class="btn btn-info" style="margin-bottom:5px; width:260px">왔던 주문</button><br>
+    <button type="button" class="btn btn-success" style="margin-bottom:5px; width:260px">했던 주문</button><br>
+    <button type="button" class="btn btn-warning" style="margin-bottom:15px; width:260px">내 정보들</button><br>
     </div>
-    
-    <div class="tab-pane fade in active" id="LIST">
-          <br>
-            <div id ="Odered_list" style="width:100%; height:440px; overflow:auto" align="center">
-            <table id="list" class="sortable" width="100%" border="0">
-  	<thead>
-    	<tr>
-            <th class="name" style="text-align:center">
-            	<a href="index.php?sort=name">이름</a>
-            </th>
-             <th class="company" style="text-align:center">
-            	<a href="index.php?sort=company">회사</a>
-            </th>
-			 <th class="number" style="text-align:center">
-            	<a href="index.php?sort=number">갯수</a>
-            </th>
-         </tr>
-     </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:center">치킨</td>
-      <td style="text-align:center">통큐</td>
-      <td style="text-align:center">100</td>
-    </tr>
-    </tbody>
-    </table>
-            </div>
-          </div>
-          
-        </div>
-    </div>
+<div class="wall" align="center">
+  <div id="ca"></div>
+    <script src="calendar.js"></script>
+    <script>
+        var now = new Date();
+        var year = now.getFullYear();
+        var month = now.getMonth()+1 ;
+        var date = now.getDate();
+
+
+        var data = [ ];
+
+        // inline
+        var $ca = $('#ca').calendar({
+            // view: 'month',
+            width: 260,
+            height: 260,
+            // startWeek: 0,
+            // selectedRang: [new Date(), null],
+            data: data,
+            date: new Date(),
+            onSelected: function(view, date, data) {
+                console.log('view:' + view)
+                console.log('date:' + date)
+                console.log('data:' + (data || '无'));
+            },
+            viewChange: function(view, y, m) {
+                console.log(view, y, m)
+
+            }
+        });
+
+        // picker
+        $('#dd').calendar({
+            trigger: '#dt',
+            // offset: [0, 1],
+            zIndex: 999,
+            data: data,
+            onSelected: function(view, date, data) {
+                console.log('event: onSelected')
+            },
+            onClose: function(view, date, data) {
+                console.log('event: onClose')
+                console.log('view:' + view)
+                console.log('date:' + date)
+                console.log('data:' + (data || '无'));
+            }
+        });
+    </script>
+    <script language="javascript"> </script>
+</div>
     <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container-fluid -->
- 
-  </div>
- 
-<form id="STATICMENU" style="background:#none; z-index:2">
+<form id="STATICMENU" style="background:none; z-index:2">
 <img src="icon/console.png" width="35" height="55" onclick="click_test()" alt=""/>
 </form>
 
@@ -119,7 +167,6 @@
   } 
  function InitializeStaticMenu() {
  // document.getElementById('STATICMENU').style.backgroundColor="#dde8f0"; //크기 보고 싶어서 색 바꿔 놓음 #dde8f0
-  
   document.getElementById('STATICMENU').style.right = stmnLEFT + 'px';  //처음에 오른쪽에 위치. left로 바꿔도.
   document.getElementById('STATICMENU').style.top = document.body.scrollTop + stmnBASE + 'px'; 
   //document.getElementById('STATICMENU').style.backgroundImage = url(icon/test.png);
@@ -169,7 +216,6 @@
 	
 	else if(flag == 1)
 	{
-	
 		var btn = document.getElementById("b1");
 		obj.removeChild(btn);
 		
@@ -189,6 +235,8 @@
  }
 </script>
 
+  </div>
+  <!-- /.container-fluid -->
 </nav>
 <footer class="footer" id="footer" align="right" style="color:#8ba0e8; margin-right:10px">Three J Two K company</footer>
 <script src="js/bootstrap.js" type="text/javascript"></script>
