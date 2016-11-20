@@ -10,7 +10,6 @@
       
 		#STATICMENU { margin: 2.5pt; padding: 0pt;  position:absolute; right: 8%; top: 85%; height:30pt; width:23px;'}
     </style>
-
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -27,75 +26,55 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header" style="background-color: #69bd8d; border-color: #69bd8d;" >
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#inverseNavbar1" style="border-color:#fff; background-color:#69bd8d; column-rule-color:#69bd8d;"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-      
-     <a class="navbar-brand" href="#" style="color:#fff; font-size:24px; text-align:center; margin-left:20px; margin-top:-3px" onClick="location='ORDER.html'"><span class="glyphicon glyphicon-credit-card" aria-hidden="true" style="margin-right:-10px">&nbsp;</span>주문으로...</a></div>
+       <a class="navbar-brand" href="#" style="color:#fff; font-size:24px; text-align:center; margin-left:20px; margin-top:-3px" onClick="location='MAIN.html'"><span class="glyphicon glyphicon-credit-card" aria-hidden="true" style="margin-right:-10px">&nbsp;</span>주문으로...</a></div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="inverseNavbar1" align="center" style="background-color: #69BD8D; border-color: #FAF8EE; margin-top: -6px;">
       <ul class="nav navbar-nav navbar-right" style="border-color: #FAF8EE; color: #69bd8d; margin-bottom: 12px;">
       <div class="btn-group" role="group">
       <button type="button" class="alert-info" style="margin-right:5px">속도UP</button>
       <button type="button" class="alert-warning" style="margin-left:5px" onClick="location='SETTING.html'">설정하기</button>
-      <button type="button" class="alert-success" style="margin-left:5px; background-color:#e9e4f0; border-color:#b9b5bf; color:#7129d3" onClick="location='ORDERED.html'">배송보기</button>
+      <button type="button" class="alert-success" style="margin-left:5px; background-color:#e9e4f0; border-color:#b9b5bf; color:#7129d3" onClick="location='SETTING.html'">배송보기</button>
        </div>
       </ul>
 </div>
 <br>
-    
-    <div>
-      <div class="input-group"><span class="input-group-addon">이름</span>
-        <input type="text" class="form-control" placeholder="Write item name">
-      </div>
-      <div class="input-group"><span class="input-group-addon">갯수</span>
-        <input type="number" class="form-control" placeholder="Insert item number">
-        <span class="input-group-addon">EA</span></div>
-      <div class="input-group"><span class="input-group-addon">즐겨찾기 이름</span>
-        <input type="text" class="form-control" placeholder="Write favorite group">
-        <span class="input-group-addon" style="background-color:rgba(92,184,92,1.00)">
-        <button type="button" class="btn btn-success" style="height: 100%; margin-left: -10px; margin-right: -10px; margin-bottom: -15px; margin-top: -18px; padding-bottom: 20px; font-size:12px; border-color:rgba(92,184,92,1.00);">추가</button>
-        </span></div>
-        <hr>
-        <div>
+
+
     <div align="center">
-    <input type="search" placeholder="즐겨찾기 이름" style="text-align:center"/>
-    <button class="btn"  style="color:#ffffff; background-color:#BD934E;">검색하기</button><br><br>
-    <label style="text-align:conter">해당 즐겨찾기 리스트</label>
+    <div align="center">
+    <input type="search"/>
+    <button class="btn" style="color:#ffffff; background-color:#A88449; border-bottom-color:rgba(230,155,156,1.00)">검색하기</button><br>
     </div>
+    <hr>
+    <div align="center" style="width:90%; height:80%; background-color:#FAF8EE">
     
-    <div class="tab-pane fade in active" id="LIST">
-          <br>
-            <div id ="Odered_list" style="width:100%; height:440px; overflow:auto" align="center">
-            <table id="list" class="sortable" width="100%" border="0">
-  	<thead>
-    	<tr>
-            <th class="name" style="text-align:center">
-            	<a href="index.php?sort=name">이름</a>
-            </th>
-             <th class="company" style="text-align:center">
-            	<a href="index.php?sort=company">회사</a>
-            </th>
-			 <th class="number" style="text-align:center">
-            	<a href="index.php?sort=number">갯수</a>
-            </th>
-         </tr>
-     </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:center">치킨</td>
-      <td style="text-align:center">통큐</td>
-      <td style="text-align:center">100</td>
-    </tr>
-    </tbody>
-    </table>
-            </div>
-          </div>
-          
-        </div>
+    <span style="width:80%; height:70%; margin-left:10px; margin-right:10px">
+    
+    삭제해도 되는 코드 시작
+    <div class="btn-toolbar" role="toolbar">
+      <div class="btn-group" role="group" align="center">
+        <button type="button" class="btn btn-default">B1</button>
+        <button type="button" class="btn btn-default">B2</button>
+      </div>
+      <div class="btn-group" role="group" align="center" style="width:100%">
+        <button type="button" class="btn btn-primary" style="width:20%">primary</button>
+        <button type="button" class="btn btn-info" style="width:20%">info</button>
+        <button type="button" class="btn btn-success" style="width:20%">success</button>
+        <button type="button" class="btn btn-warning" style="width:20%">warning</button>
+        <button type="button" class="btn btn-danger" style="width:20%">danger</button>
+      </div>
     </div>
+    삭제해도 되는 코드 끝
+    </span>
+    </div>
+  <br>
     <!-- /.navbar-collapse -->
   </div>
   <!-- /.container-fluid -->
- </nav>
- <form id="STATICMENU" style="background:#none">
+ 
+  </div>
+ 
+<form id="STATICMENU" style="background:#none; z-index:2">
 <img src="icon/console.png" width="35" height="55" onclick="click_test()" alt=""/>
 </form>
 
@@ -192,7 +171,8 @@
 	
  }
 </script>
-<footer class="footer" id="footer" align="right" style="color:#8ba0e8; margin-right:10px">Three J Two K company</footer>
+</nav>
+<footer class="footer" id="footer" align="right" style="color:#8ba0e8; margin-right:10px"><br>Three J Two K company</footer>
 <script src="js/bootstrap.js" type="text/javascript"></script>
 </body>
 </html>
