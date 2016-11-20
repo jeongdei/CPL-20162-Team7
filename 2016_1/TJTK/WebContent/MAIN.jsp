@@ -246,29 +246,4 @@
 <script src="js/bootstrap.js" type="text/javascript"></script>
 </body>
 </html>
-
-</script>
-<% 
-	Connection conn = DBconn.getConnection();
-	Statement st = null;
-	String sql = null;
-	ResultSet rs = null;
-	String Array_name[];
-	int Array_price[];
-	int Array_count[];
-	int count = 0;
-	int i = 0;
-	
-	
-	st = conn.createStatement();
-	
-	
-	
-%>
-  </div>
   <!-- /.container-fluid -->
-</nav>
-<footer class="footer" id="footer" align="right" style="color:#8ba0e8; margin-right:10px">Three J Two K company</footer>
-<script src="js/bootstrap.js" type="text/javascript"></script>
-</body>
-</html>
