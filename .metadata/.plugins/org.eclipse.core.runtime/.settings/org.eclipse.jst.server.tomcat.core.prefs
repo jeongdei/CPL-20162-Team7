@@ -1,2 +1,7 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
+locationorg.eclipse.jst.server.tomcat.runtime.60=C\:/Users/Myung Jun/Desktop/ProjectP
+locationorg.eclipse.jst.server.tomcat.runtime.70=/usr/local/apache-tomcat-7.0.72
+=======
 locationorg.eclipse.jst.server.tomcat.runtime.70=/Users/de3/Downloads/apache-tomcat-7.0.73
+>>>>>>> origin/master

@@ -376,3 +376,14 @@
  }
 </script>
 
+<<<<<<< HEAD
+=======
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<footer class="footer" id="footer" align="right" style="color:#8ba0e8; margin-right:10px">Three J Two K company</footer>
+<script src="js/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>
+  <!-- /.container-fluid -->
+>>>>>>> origin/master

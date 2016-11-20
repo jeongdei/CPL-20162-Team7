@@ -16,12 +16,12 @@ public class DBconn {
             String driverName="com.mysql.jdbc.Driver";
             String url = "jdbc:mysql://localhost:3306/lastproject";
             String id = "root";
-            String pwd ="1234";
+            String pwd ="audwns12";
            
             Class.forName(driverName);     
-            System.out.println("ë“œë¼ì´ë²„ë¡œë“œ");
+            System.out.println("µå¶óÀÌ¹ö·Îµå");
             dbConn = DriverManager.getConnection(url, id, pwd);
-            System.out.println("DBì—°ê²°ì„±ê³µ!");
+            System.out.println("DB¿¬°á¼º°ø!");
         }
        
        
@@ -29,7 +29,7 @@ public class DBconn {
     }   
     public static void close() throws SQLException{
         if(dbConn!=null){   
-            System.out.println("connë‹«ê¸°()");
+            System.out.println("conn´İ±â()");
             if(!dbConn.isClosed()){
                 dbConn.close();
             }           
