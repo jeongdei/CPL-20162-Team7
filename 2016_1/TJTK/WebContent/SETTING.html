@@ -72,21 +72,24 @@
       <div class="btn-group" role="group">
       <button type="button" class="alert-info" style="margin-right:5px">속도UP</button>
       <button type="button" class="alert-warning" style="margin-left:5px" onClick="location='SETTING.html'">설정하기</button>
-      <button type="button" class="alert-success" style="margin-left:5px; background-color:#e9e4f0; border-color:#b9b5bf; color:#7129d3" onClick="location='ORDERED.html'">배송보기</button>
+      <!-- <button type="button" class="alert-success" style="margin-left:5px; background-color:#e9e4f0; border-color:#b9b5bf; color:#7129d3" onClick="location='ORDERED.html'">배송보기</button> -->
        </div>
       </ul>
 </div>
 <br>
     <div align="center">
-    <label style="margin-left: 10px; margin-right:100px; font-size:16px">리모콘 보기</label>
+    <strong><label style="margin-left: 42px; margin-right:70px; font-size:16px" align="left">리모콘 보기</label></strong>
     <label class="switch" style="background-color:#000000">
       <input type="checkbox" class="switch-input">
       <span class="switch-label" data-on="On" data-off="Off"></span>
       <span class="switch-handle"></span>
     </label><br>
-    <label style="font-size:16px; margin-right:80px">버튼 설정
-    </label><br>
-    <div>
+    <div class="panel-group" id="accordion1">
+      <div class="panel panel-default" style="background-color:#FAF8EE; border-color:#FAF8EE; color:#000000">
+        <div class="panel-heading" style="background-color:#FAF8EE; border-color:#FAF8EE; color:#000000">
+          <h4 class="panel-title" align="center"><strong><label data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">리모콘 버튼 설정 ↓</label></strong></h4>
+        </div>
+        <div id="collapseOne1" class="panel-collapse collapse in">
     <label style="font-size:16px; margin-right:60px; margin-left:80px">1번 버튼
     </label>
     <div class="btn-group">
@@ -147,14 +150,9 @@
       </ul>
     </div>
     </div>
-<br>
-    <label style="margin-left: 18px; margin-right:106px; font-size:16px">알람 켜기</label>
-     <label class="switch" style="background-color:#000000">
-      <input type="checkbox" class="switch-input">
-      <span class="switch-label" data-on="On" data-off="Off"></span>
-      <span class="switch-handle"></span>
-    </label><br>
-    
+          </div>
+    </div>
+    <button type="button" class="btn btn-success">설정 완료</button>
     </div>
     <br>
     
