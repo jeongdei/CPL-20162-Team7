@@ -711,7 +711,7 @@
 				var show_shoplist=confirm(day.getDate() + " "+ day.getMonth()+ " "+day.getFullYear());//창에 띄어주는 내용.
 				if(show_shoplist==true)
 				{
-					 location.href="CAL_ORDER.html";
+					 location.href="NewFile.html";
 				}
                 _this.options.onSelected.call(this, 'date', day, $(this).data(MARK_DATA)); 
 
