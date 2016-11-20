@@ -34,9 +34,7 @@
 </div>
 <br>
     <!-- /.navbar-collapse -->
-<!------- ---->
-  
-  <div id ="Shopping_Cart" style="width:100%; height:320px; overflow:auto" align="center">
+<!------- --->
     
    
 <!------ TABLE SORTING javascript -- star -->    
@@ -214,21 +212,23 @@ function getTextByClone( tag ){
 } 
 </script>
   
-  <table id="cart" class="sortable" width="100%" border="0">
+  <table id="cart_name" class="sortable" width="100%" border="0">
   	<thead>
     	<tr>
-            <th class="company" style="text-align:center">회사<button class="btn" onclick="sortTD(0)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD(0)">▼</button></th>
-             <th  class="item" style="text-align:center">아이템<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="sortTD(1)">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px"  onclick="reverseTD(1)">▼</button></th>
-			 <th class="number" style="text-align:center">수량<button class="btn" onclick="sortTD(2)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD(2)">▼</button></th>
-             <th class="delivery" style="text-align:center">배송상태<button class="btn" onclick="sortTD(3)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD(3)">▼</button></th>
+            <th class="company" style="text-align:center; width:25%">회사<button class="btn" onclick="sortTD(0)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD(0)">▼</button></th>
+             <th  class="item" style="text-align:center; width:25%">아이템<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="sortTD(1)">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px"  onclick="reverseTD(1)">▼</button></th>
+			 <th class="number" style="text-align:center; width:25%">수량<button class="btn" onclick="sortTD(2)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD(2)">▼</button></th>
+             <th class="delivery" style="text-align:center; width:25%">배송상태<button class="btn" onclick="sortTD(3)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD(3)">▼</button></th>
          </tr>
-     </thead>
+     </thead></table>
+  <div id ="Shopping_Cart" style="width:100%; height:500px; overflow:auto" align="center">
+  <table id="cart" class="sortable" width="100%" border="0">
   <tbody>
     <tr style="text-align:center">              
-        <td>삼성엘지안녕</td>
-        <td>갤럭시팡팡</td>
-        <td>1000000000개</td>
-        <td>배송중</td>
+        <td style="width:25%">삼성엘지안녕</td>
+        <td style="width:25%">갤럭시팡팡</td>
+        <td style="width:25%">1000000000개</td>
+        <td style="width:25%">배송중</td>
       </tr>
       <tr style="text-align:center">
         <td>애플싸라해요</td>
