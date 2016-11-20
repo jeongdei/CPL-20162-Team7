@@ -126,7 +126,7 @@ window.onload = function(){
             <tr>
               <th id="check" style="text-align:center" width="40%">회사<button class="btn" onclick="sortTD(0)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD(0)">▼</button></th>
               <th id="name" style="text-align:center" width="30%">이름<button class="btn" onclick="sortTD(1)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD(1)">▼</button> </th>
-              <th id="number" style="text-align:center" width="30%">갯수<button class="btn" onclick="sortTD(2)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD(2)">▼</button> </th>
+              <th id="number" style="text-align:center" width="40%">갯수<button class="btn" onclick="sortTD(2)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD(2)">▼</button> </th>
             </tr>
           </thead>
         </table>
@@ -134,7 +134,7 @@ window.onload = function(){
           <table id="cart" class="sortable" width="100%" border="0">
             <tbody>
               <tr>
-                <th width="%" style="text-align:center"> <input type="checkbox"><br>
+                <th width="40%" style="text-align:center"> <input type="checkbox"><br>
                   <span>Apple</span></th>
                 <td><table width="100%">
                     <tr>
@@ -234,9 +234,9 @@ window.onload = function(){
         <table align="center" width="100%">
           <thead>
             <tr>
-              <th id="check2" style="text-align:center" width="40%"> 회사</th>
-              <th id="name2" style="text-align:center" width="10%"> 이름</th>
-              <th id="number2" style="text-align:center" width="50%"> 갯수</th>
+              <th id="check2" style="text-align:center" width="40%"> 회사<button class="btn" onclick="sortTD2(0)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD2(0)">▼</button></th>
+              <th id="name2" style="text-align:center" width="30%"> 이름<button class="btn" onclick="sortTD2(1)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD2(1)">▼</button></th>
+              <th id="number2" style="text-align:center" width="40%"> 갯수<button class="btn" onclick="sortTD2(2)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD2(2)">▼</button></th>
             </tr>
           </thead>
         </table>
@@ -248,8 +248,8 @@ window.onload = function(){
                   Apple</th>
                 <td><table width="100%">
                     <tr>
-                      <td width="20%" style="text-align:center">mac</td>
-                      <td width="55%" style="text-align:center"><input type="number" style="width:60px"></td>
+                      <td width="50%" style="text-align:center">mac</td>
+                      <td width="50%" style="text-align:center"><input type="number" style="width:60px"></td>
                     </tr>
                     <tr>
                       <td width="20%" style="text-align:center">mac</td>
@@ -270,8 +270,8 @@ window.onload = function(){
                   Samsung</th>
                 <td><table width="100%">
                     <tr>
-                      <td width="20%" style="text-align:center">galaxy</td>
-                      <td width="55%" style="text-align:center"><input type="number" style="width:60px"></td>
+                      <td width="50%" style="text-align:center">galaxy</td>
+                      <td width="50%" style="text-align:center"><input type="number" style="width:60px"></td>
                     </tr>
                     <tr>
                       <td width="20%" style="text-align:center">galaxy</td>
@@ -292,8 +292,8 @@ window.onload = function(){
                   LG</th>
                 <td><table width="100%">
                     <tr>
-                      <td width="20%" style="text-align:center">opg</td>
-                      <td width="55%" style="text-align:center"><input type="number" style="width:60px"></td>
+                      <td width="50%" style="text-align:center">opg</td>
+                      <td width="50%" style="text-align:center"><input type="number" style="width:60px"></td>
                     </tr>
                     <tr>
                       <td width="20%" style="text-align:center">opg</td>
@@ -314,8 +314,8 @@ window.onload = function(){
                   Google</th>
                 <td><table width="100%">
                     <tr>
-                      <td width="20%" style="text-align:center">android</td>
-                      <td width="55%" style="text-align:center"><input type="number" style="width:60px"></td>
+                      <td width="50%" style="text-align:center">android</td>
+                      <td width="50%" style="text-align:center"><input type="number" style="width:60px"></td>
                     </tr>
                     <tr>
                       <td width="20%" style="text-align:center">android</td>
@@ -561,8 +561,11 @@ function getTextByClone( tag ){
 <script src="js/bootstrap.js" type="text/javascript"></script>
 <script type="text/javascript">
 var myTable = document.getElementById( "cart" ); 
+var myTable2 = document.getElementById( "cart2" ); 
 function sortTD( index ){    replacement(myTable).ascending( index );    } 
-function reverseTD( index ){    replacement(myTable).descending( index );    } 
+function sortTD2( index ){    replacement(myTable2).ascending( index );    } 
+function reverseTD( index ){    replacement(myTable).descending( index );    }
+function reverseTD2( index ){    replacement(myTable2).descending( index );    } 
 </script>
 </body>
 </html>
