@@ -21,8 +21,7 @@
         
         a {
             text-decoration: none;
-        }
-        
+        }        
         ul,
         ol,
         li {
@@ -49,7 +48,7 @@
             outline: none;
         }
 		
-		#STATICMENU { margin: 2.5pt; padding: 0pt;  position:absolute; right: 8%; top: 85%; height:30pt; width:23px;'}
+		#STATICMENU { margin: 2.5pt; padding: 0pt;  position: fixed; right: 90px; bottom:35px; height:30pt; width:23px;'}
     </style>
 
 <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
@@ -65,26 +64,26 @@
 <![endif]-->
 </head>
 
-<body style="background-color:#FAF8EE">
+<body id="mybody" style="background-color:#FAF8EE" height="100%">
 <nav class="navbar navbar-inverse" style="border-color:#FAF8EE; background-color:#FAF8EE">
   <div class="container-fluid" style="background-color:#FAF8EE">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header" style="background-color: #69bd8d; border-color: #69bd8d;" >
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#inverseNavbar1" style="border-color:#fff; background-color:#69bd8d; column-rule-color:#69bd8d;"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-      <a class="navbar-brand" href="#" style="color: #fff; font-size: 24px; text-align: center; margin-left: 20px;" onClick="location='MAIN.html'">전김강정조</a></div>
+      <a class="navbar-brand" href="#" style="color:#fff; font-size:24px; text-align:center; margin-left:20px" onClick="location='MAIN.html'">전김강정조</a></div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="inverseNavbar1" align="center" style="background-color: #69BD8D; border-color: #FAF8EE; margin-top: -6px;">
       <ul class="nav navbar-nav navbar-right" style="border-color: #FAF8EE; color: #69bd8d; margin-bottom: 12px;">
       <div class="btn-group" role="group">
       <button type="button" class="alert-info" style="margin-right:5px">속도UP</button>
       <button type="button" class="alert-warning" style="margin-left:5px" onClick="location='SETTING.html'">설정하기</button>
-      <button type="button" class="alert-success" style="margin-left:5px; background-color:#e9e4f0; border-color:#b9b5bf; color:#7129d3" onClick="location='ORDERED.html'">배송보기</button>
        </div>
       </ul>
 </div><br>
     <div align="center">
-    <button type="button" class="btn btn-primary" style="margin-bottom:5px; width:260px" onClick="location='ORDER.html'">주문 하기</button><br>
-    <button type="button" class="btn btn-info" style="margin-bottom:5px; width:260px" onClick="location='ORDER_LIST.html'">왔던 주문</button><br>
+    <button type="button" class="btn btn-primary" style="margin-bottom:5px; width:260px" onClick="location='ORDER.jsp'">주문 하기</button><br>
+    <button type="button" class="btn btn-info" style="margin-bottom:5px; width:260px" onClick="location='ORDERED.html'">주문한 내역</button><br>
+      <button type="button" class="btn btn-success" style="margin-bottom:5px; width:260px" onClick="location='ORDER_LIST.html'">들어온 주문</button><br>
     <button type="button" class="btn btn-warning" style="margin-bottom:15px; width:260px" onClick="location='INVENTORY.html'">내 정보들</button><br>
     </div>
 <div class="wall" align="center">
@@ -142,12 +141,73 @@
     </script>
     <script language="javascript"> </script>
 </div>
-    <!-- /.navbar-collapse -->
-<form id="STATICMENU" style="background:none; z-index:2">
+<form id="STATICMENU" style="background:none">
 <img src="icon/console.png" width="35" height="55" onclick="click_test()" alt=""/>
 </form>
 
-    <script type="text/javascript">
+
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
+<footer class="footer" id="footer" align="right" style="color:#8ba0e8; margin-right:10px">Three J Two K company</footer>
+<script src="js/bootstrap.js" type="text/javascript"></script>
+</body>
+</html>
+
+<% 
+	Connection conn = DBconn.getConnection();
+	Statement st = null;
+	String sql = null;
+	ResultSet rs = null;
+	String Array_category[];
+	String Array_location[];
+	String Array_src[];
+	int Array_seq[];
+	int count = 0;
+	int i = 0;
+	
+	String category;
+	String location;
+	String src;
+	int state;
+	int seq;
+	
+	
+	st = conn.createStatement();
+	
+	//여기 고칠 것!!!!!!
+	sql = "select  * from remote";
+	rs = st.executeQuery(sql);
+	
+    Array_category = new String[3];
+	Array_location = new String[3];
+	Array_src = new String[3];
+	Array_seq = new int[3];
+	
+	while(rs.next()!=false){
+		category = rs.getString("category");
+		location = rs.getString("location");
+		src = rs.getString("src");
+		state = rs.getInt("state");
+		seq = rs.getInt("seq");
+		
+		if(state!=0)
+		{
+			Array_category[i] = category;
+			Array_location[i] = location;
+			Array_src[i] = src;
+			Array_seq[i] = seq;
+			i++;			
+			System.out.println("eeeee");
+		}
+	} 
+	
+	st.close();
+	
+%>
+
+<script type="text/javascript">
  var stmnLEFT = 10; // 오른쪽 여백 
  var stmnGAP1 = 0; // 위쪽 여백 
  var stmnGAP2 = 150; // 스크롤시 브라우저 위쪽과 떨어지는 거리 
@@ -156,6 +216,11 @@
  var stmnScrollSpeed = 20; //스크롤 속도 (클수록 느림)
  var stmnTimer; 
  var flag = 0;
+ var index = "<%=i%>";
+ var position1 = 'position :fixed; right : 0px; bottom :90px ; height:25pt; width:25px; solid : #0000';
+ var position2 = 'position :fixed; right : 33px; bottom :99px ; height:23pt; width:30px; solid : #0000';
+ var position3 = 'position :fixed; right :35px; bottom:95px ; height:25pt; width:30px; solid : #0000';
+ var position4 = 'position :fixed; right :15px; bottom : 96px ; height:25pt; width:25px; solid : #0000';
  
  function RefreshStaticMenu() { 
   var stmnStartPoint, stmnEndPoint; 
@@ -171,6 +236,7 @@
   } 
  function InitializeStaticMenu() {
  // document.getElementById('STATICMENU').style.backgroundColor="#dde8f0"; //크기 보고 싶어서 색 바꿔 놓음 #dde8f0
+  
   document.getElementById('STATICMENU').style.right = stmnLEFT + 'px';  //처음에 오른쪽에 위치. left로 바꿔도.
   document.getElementById('STATICMENU').style.top = document.body.scrollTop + stmnBASE + 'px'; 
   //document.getElementById('STATICMENU').style.backgroundImage = url(icon/test.png);
@@ -179,15 +245,85 @@
  
  function click_test(){
 	var obj = document.getElementById('STATICMENU');
-	 
+	//int p,q;
+	
+	var cate = new Array();
+	var loca = new Array();
+	var src = new Array();
+	var seq = new Array();
+	
+	
 	if(flag == 0)
 	{
+		//alert(index);
 		
+		<%for (int k = 0; k < i; k++) {%>
+		
+		cate[<%=k%>] = '<%=Array_category[k]%>';
+		loca[<%=k%>] = '<%=Array_location[k]%>';
+		src[<%=k%>] = '<%=Array_src[k]%>';
+		seq[<%=k%>] = '<%=Array_seq[k]%>';
+	<%}%>
+		
+		for(p=0;p<index;p++){
+			for(q=1;q<5;q++){
+				if(seq[p] == q){
+					
+					if(q==1)
+					{
+						var btnupdate = document.createElement('img');
+					    btnupdate.setAttribute('id', 'b1');
+					    //btnupdate.setAttribute('type', 'button');
+					    btnupdate.setAttribute('src', src[p]);
+					    btnupdate.setAttribute('style','position :fixed; right : 120px; bottom :50px ; height:25pt; width:25px; solid : #0000');
+					    btnupdate.onclick = "location='"+loca[p]+"'";
+					    obj.appendChild(btnupdate);
+					}
+					
+					else if(q==2)
+					{
+						var btnupdate = document.createElement('img');
+					    btnupdate.setAttribute('id', 'b2');
+					    //btnupdate.setAttribute('type', 'button');
+					    btnupdate.setAttribute('src', src[p]);
+					    btnupdate.setAttribute('style','position :fixed; right : 100px; bottom :90px ; height:23pt; width:30px; solid : #0000');
+					    btnupdate.onclick = "location='"+loca[p]+"'";
+					    obj.appendChild(btnupdate);
+					}
+					
+					else if(q==3)
+					{
+						var btnupdate = document.createElement('img');
+					    btnupdate.setAttribute('id', 'b3');
+					    //btnupdate.setAttribute('type', 'button');
+					    btnupdate.setAttribute('src', src[p]);
+					    btnupdate.setAttribute('style','position :fixed; right :65px; bottom:90px ; height:25pt; width:30px; solid : #0000');
+					    btnupdate.onclick = "location='"+loca[p]+"'";
+					    obj.appendChild(btnupdate);
+					}
+					else if(q==4){
+						var btnupdate = document.createElement('img');
+					    btnupdate.setAttribute('id', 'b4');
+					    //btnupdate.setAttribute('type', 'button');
+					    btnupdate.setAttribute('src', src[p]);
+					    btnupdate.setAttribute('style','position :fixed; right :50px; bottom : 50px ; height:25pt; width:25px; solid : #0000');
+					    btnupdate.onclick = "location='"+loca[p]+"'";
+					    obj.appendChild(btnupdate);
+					}
+					
+					
+				}
+				//alert("check");
+			}
+			
+		}
+ 
+		/*
 		var btnupdate = document.createElement('img');
 	    btnupdate.setAttribute('id', 'b1');
 	    //btnupdate.setAttribute('type', 'button');
 	    btnupdate.setAttribute('src', 'icon/lace.png');
-	    btnupdate.setAttribute('style','position :relative; right : 0px; bottom :90px ; height:25pt; width:25px; solid : #0000');
+	    btnupdate.setAttribute('style','position :fixed; right : 120px; bottom :50px ; height:25pt; width:25px; solid : #0000');
 	    btnupdate.onclick = function() {  alert('test1');  };
 	    obj.appendChild(btnupdate);
 	    
@@ -195,7 +331,7 @@
 	    btnupdate.setAttribute('id', 'b2');
 	    //btnupdate.setAttribute('type', 'button');
 	    btnupdate.setAttribute('src', 'icon/credit-card.png');
-	    btnupdate.setAttribute('style','position :relative; right : 33px; bottom :99px ; height:23pt; width:30px; solid : #0000')
+	    btnupdate.setAttribute('style','position :fixed; right : 100px; bottom :90px ; height:23pt; width:30px; solid : #0000')
 	    btnupdate.onclick = function() {  alert('test');  };
 	    obj.appendChild(btnupdate);
 		
@@ -203,7 +339,7 @@
 	    btnupdate.setAttribute('id', 'b3');
 	    //btnupdate.setAttribute('type', 'button');
 	    btnupdate.setAttribute('src', 'icon/delivery-truck.png');
-	    btnupdate.setAttribute('style','position :relative; right :35px; bottom:95px ; height:25pt; width:30px; solid : #0000')
+	    btnupdate.setAttribute('style','position :fixed; right :65px; bottom:90px ; height:25pt; width:30px; solid : #0000')
 	    btnupdate.onclick = function() {  alert('test');  };
 	    obj.appendChild(btnupdate); 
 	    
@@ -211,15 +347,16 @@
 	    btnupdate.setAttribute('id', 'b4');
 	    //btnupdate.setAttribute('type', 'button');
 	    btnupdate.setAttribute('src', 'icon/fix.png');
-	    btnupdate.setAttribute('style','position :relative; right :15px; bottom : 96px ; height:25pt; width:25px; solid : #0000')
+	    btnupdate.setAttribute('style','position :fixed; right :50px; bottom : 50px ; height:25pt; width:25px; solid : #0000')
 	    btnupdate.onclick = function() {  alert('test');  };
-	    obj.appendChild(btnupdate);
-	    
+	    obj.appendChild(btnupdate); 
+	    */
 	    flag = 1;
 	}
 	
 	else if(flag == 1)
 	{
+	
 		var btn = document.getElementById("b1");
 		obj.removeChild(btn);
 		
@@ -239,39 +376,3 @@
  }
 </script>
 
-  </div>
-  <!-- /.container-fluid -->
-</nav>
-<footer class="footer" id="footer" align="right" style="color:#8ba0e8; margin-right:10px">Three J Two K company</footer>
-<script src="js/bootstrap.js" type="text/javascript"></script>
-</body>
-</html>
-
-</script>
-<% 
-	Connection conn = DBconn.getConnection();
-	Statement st = null;
-	String sql = null;
-	ResultSet rs = null;
-	String Array_name[];
-	int Array_price[];
-	int Array_count[];
-	int count = 0;
-	int i = 0;
-	
-	
-	st = conn.createStatement();
-	
-	//여기 고칠 것!!!!!!
-	sql = "select  from remote_state";
-	st.executeUpdate(sql);
-	st.close();
-	
-%>
-  </div>
-  <!-- /.container-fluid -->
-</nav>
-<footer class="footer" id="footer" align="right" style="color:#8ba0e8; margin-right:10px">Three J Two K company</footer>
-<script src="js/bootstrap.js" type="text/javascript"></script>
-</body>
-</html>
