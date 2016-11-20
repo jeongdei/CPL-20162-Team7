@@ -5,7 +5,12 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+<<<<<<< HEAD
 			<item value="C:\Users\Myung Jun\Desktop\CPL-20162-Team7\2016_1\TJTK"/>
+=======
+			<item value="/Users/de3/Desktop/3학년2학기/CPL-20162-Team7/2016_1/Servers"/>
+			<item value="/Users/de3/Desktop/3학년2학기/CPL-20162-Team7/2016_1/TJTK"/>
+>>>>>>> origin/master
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>

@@ -9,11 +9,15 @@
 		<item value="false" key="linkWithEditor"/>
 	</section>
 	<section name="BuildPathsPropertyPage">
+<<<<<<< HEAD
 		<item value="2" key="pageIndex"/>
 	</section>
 	<section name="quick_assist_proposal_size">
 	</section>
 	<section name="completion_proposal_size">
+=======
+		<item value="3" key="pageIndex"/>
+>>>>>>> origin/master
 	</section>
 	<section name="JavaElementSearchActions">
 	</section>
