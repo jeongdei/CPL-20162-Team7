@@ -20,73 +20,35 @@
 
     var defaults = {
 
-            // 宽度
             width: 280,
-            // 高度, 不包含头部，头部固定高度
             height: 280,
 
             zIndex: 1,
 
-            // selector or element
-            // 设置触发显示的元素，为null时默认显示
             trigger: null,
 
-            // 偏移位置，可设正负值
-            // trigger 设置时生效
             offset: [0, 1],
 
-            // 自定义类，用于重写样式
             customClass: '',
 
-            // 显示视图
-            // 可选：date, month
             view: 'date',
 
-            // 默认日期为当前日期
             date: new Date(),
             format: 'yyyy/mm/dd',
 
-            // 一周的第一天
-            // 0表示周日，依次类推
             startWeek: 0,
 
-            // 星期格式
             weekArray: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
 
-            // 设置选择范围
-            // 格式：[开始日期, 结束日期]
-            // 开始日期为空，则无上限；结束日期为空，则无下限
-            // 如设置2015年11月23日以前不可选：[new Date(), null] or ['2015/11/23']
             selectedRang: null,
-
-            // 日期关联数据 [{ date: string, value: object }, ... ]
-            // 日期格式与 format 一致
-            // 如 [ {date: '2015/11/23', value: '面试'} ]
             data: null,
-
-            // 展示关联数据
-            // 格式化参数：{m}视图，{d}日期，{v}value
-            // 设置 false 表示不显示
             label: '{d}\n{v}',
-
-            // 切换字符
             prev: '&lt;',
             next: '&gt;',
-
-            // 切换视图
-            // 参数：view, y, m
             viewChange: $.noop,
-
-            // view: 视图
-            // date: 不同视图返回不同的值
-            // value: 日期关联数据
             onSelected: function(view, date, value) {
-                // body...
             },
-
-            // 参数同上
             onMouseenter: $.noop,
-
             onClose: $.noop
         },
 
@@ -708,13 +670,40 @@
                     cls = getClass(this),
                     type = /new|old/.test(cls) ? cls.match(/new|old/)[0] : '';
 
-                var day = _this.selectedDay(d, type);
-
-				var show_shoplist=confirm(day.getDate() + " "+ day.getMonth()+ " "+day.getFullYear());//창에 띄어주는 내용.
-				if(show_shoplist==true)
-				{
-					 location.href="CAL_ORDER.html";
-				}
+                  //메인에서 선택된 날짜 확인
+	                 //만약 현재날짜 이후를 선택할 경우 오류
+	                 //선택한 날짜 누르고 확인누르면 해당 날짜의 구매,판매 내역정보 보여줌
+	                var day = _this.selectedDay(d, type);
+					var to_day=new Date();
+					if(day<=to_day)
+					{
+						var show_shoplist=confirm(day.getFullYear()+"년 "+(day.getMonth()+1)+"월 "+day.getDate() + "일 내역을 보시겠습니까?");//창에 띄어주는 내용.
+						var day_str=day.getFullYear()+""+(day.getMonth()+1)+""+day.getDate();
+						
+						
+						if(show_shoplist==true)
+						{
+							
+							divdiv = document.getElementById('ca');
+//							var button = document.createElement('button');
+//							divdiv.appendChild(button);
+							var form = document.createElement('form');
+							form.setAttribute("action","CAL_ORDER.jsp");
+							form.setAttribute("method","POST");
+							var sub = document.createElement('input');
+							sub.setAttribute("type","Hidden");
+							sub.setAttribute("name","plz");
+							
+							sub.setAttribute("value",day_str);
+							form.appendChild(sub);
+							divdiv.appendChild(form);
+							
+							form.submit();
+//							alert("asd");
+						}
+					}
+					else
+						alert('과거 내역만 확인 가능합니다.');
                 _this.options.onSelected.call(this, 'date', day, $(this).data(MARK_DATA)); 
 
                 _this.$trigger && _this.hide('date', day, $(this).data(MARK_DATA));

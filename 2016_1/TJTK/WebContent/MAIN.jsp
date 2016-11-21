@@ -2,54 +2,66 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="java.net.*"%>
+<%@page import="java.util.Enumeration"%>
+<%@page import="java.util.StringTokenizer"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, webkit">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, webkit">
 <title>Untitled Document</title>
 <link rel="stylesheet" href="css/calendar.css">
-    <style type="text/css">
-        
-		html {
-            font: 500 10px "Helvetica Neue", Helvetica, Arial, sans-serif;
-            color: #333;
-        }
-        
-        a {
-            text-decoration: none;
-        }        
-        ul,
-        ol,
-        li {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        #demo {
-            width: 300px;
-            margin: 30px auto;
-        }
-        
-        p {
-            margin: 0;
-        }
-        
-        input {
-            margin: 30px auto;
-            height: 28px;
-            width: 200px;
-            padding: 0 6px;
-            border: 1px solid #ccc;
-            outline: none;
-        }
-		
-		#STATICMENU { margin: 2.5pt; padding: 0pt;  position: fixed; right: 90px; bottom:35px; height:30pt; width:23px;'}
-    </style>
+<style type="text/css">
+html {
+	font: 500 10px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #333;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul, ol, li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#demo {
+	width: 300px;
+	margin: 30px auto;
+}
+
+p {
+	margin: 0;
+}
+
+input {
+	margin: 30px auto;
+	height: 28px;
+	width: 200px;
+	padding: 0 6px;
+	border: 1px solid #ccc;
+	outline: none;
+}
+
+#STATICMENU {
+	margin: 2.5pt;
+	padding: 0pt;
+	position: fixed;
+	right: 90px;
+	bottom: 35px;
+	height: 30pt;
+	width: 23px;
+	'
+}
+</style>
 
 <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
 <script src="js/calendar.js"></script>
@@ -64,32 +76,60 @@
 <![endif]-->
 </head>
 
-<body id="mybody" style="background-color:#FAF8EE" height="100%">
-<nav class="navbar navbar-inverse" style="border-color:#FAF8EE; background-color:#FAF8EE">
-  <div class="container-fluid" style="background-color:#FAF8EE">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header" style="background-color: #69bd8d; border-color: #69bd8d;" >
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#inverseNavbar1" style="border-color:#fff; background-color:#69bd8d; column-rule-color:#69bd8d;"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-      <a class="navbar-brand" href="#" style="color:#fff; font-size:24px; text-align:center; margin-left:20px" onClick="location='MAIN.html'">전김강정조</a></div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="inverseNavbar1" align="center" style="background-color: #69BD8D; border-color: #FAF8EE; margin-top: -6px;">
-      <ul class="nav navbar-nav navbar-right" style="border-color: #FAF8EE; color: #69bd8d; margin-bottom: 12px;">
-      <div class="btn-group" role="group">
-      <button type="button" class="alert-info" style="margin-right:5px">속도UP</button>
-      <button type="button" class="alert-warning" style="margin-left:5px" onClick="location='SETTING.html'">설정하기</button>
-       </div>
-      </ul>
-</div><br>
-    <div align="center">
-    <button type="button" class="btn btn-primary" style="margin-bottom:5px; width:260px" onClick="location='ORDER.jsp'">주문 하기</button><br>
-    <button type="button" class="btn btn-info" style="margin-bottom:5px; width:260px" onClick="location='ORDERED.html'">주문한 내역</button><br>
-      <button type="button" class="btn btn-success" style="margin-bottom:5px; width:260px" onClick="location='ORDER_LIST.html'">들어온 주문</button><br>
-    <button type="button" class="btn btn-warning" style="margin-bottom:15px; width:260px" onClick="location='INVENTORY.html'">내 정보들</button><br>
-    </div>
-<div class="wall" align="center">
-  <div id="ca"></div>
-    <script src="calendar.js"></script>
-    <script>
+<body id="mybody" style="background-color: #FAF8EE" height="100%">
+	<nav class="navbar navbar-inverse"
+		style="border-color: #FAF8EE; background-color: #FAF8EE">
+		<div class="container-fluid" style="background-color: #FAF8EE">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header"
+				style="background-color: #69bd8d; border-color: #69bd8d;">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#inverseNavbar1"
+					style="border-color: #fff; background-color: #69bd8d; column-rule-color: #69bd8d;">
+					<span class="sr-only">Toggle navigation</span><span
+						class="icon-bar"></span><span class="icon-bar"></span><span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"
+					style="color: #fff; font-size: 24px; text-align: center; margin-left: 20px"
+					onClick="location='MAIN.html'">전김강정조</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="inverseNavbar1"
+				align="center"
+				style="background-color: #69BD8D; border-color: #FAF8EE; margin-top: -6px;">
+				<ul class="nav navbar-nav navbar-right"
+					style="border-color: #FAF8EE; color: #69bd8d; margin-bottom: 12px;">
+					<div class="btn-group" role="group">
+						<button type="button" class="alert-info" style="margin-right: 5px">속도UP</button>
+						<button type="button" class="alert-warning"
+							style="margin-left: 5px" onClick="location='SETTING.html'">설정하기</button>
+					</div>
+				</ul>
+			</div>
+			<br>
+			<div align="center">
+				<button type="button" class="btn btn-primary"
+					style="margin-bottom: 5px; width: 260px"
+					onClick="location='ORDER.jsp'">주문 하기</button>
+				<br>
+				<button type="button" class="btn btn-info"
+					style="margin-bottom: 5px; width: 260px"
+					onClick="location='ORDERED.html'">주문한 내역</button>
+				<br>
+				<button type="button" class="btn btn-success"
+					style="margin-bottom: 5px; width: 260px"
+					onClick="location='ORDER_LIST.html'">들어온 주문</button>
+				<br>
+				<button type="button" class="btn btn-warning"
+					style="margin-bottom: 15px; width: 260px"
+					onClick="location='INVENTORY.html'">내 정보들</button>
+				<br>
+			</div>
+			<div class="wall" align="center">
+				<div id="ca"></div>
+				<script src="calendar.js"></script>
+				<script>
         var now = new Date();
         var year = now.getFullYear();
         var month = now.getMonth()+1 ;
@@ -120,6 +160,7 @@
         });
 
         // picker
+       
         $('#dd').calendar({
             trigger: '#dt',
             // offset: [0, 1],
@@ -129,7 +170,7 @@
                 console.log('event: onSelected')
 				var btnupdate = document.createElement('button');
 	    btnupdate.setAttribute('id', 'go_CAL_ORDER');
-		btnupdate.serAttribute('onClick',location='CAL_ORDER.html');
+		btnupdate.serAttribute('onClick',location='CAL_ORDER.jsp');
             },
             onClose: function(view, date, data) {
                 console.log('event: onClose')
@@ -137,21 +178,25 @@
                 console.log('date:' + date)
                 console.log('data:' + (data || '无'));
             }
+            
         });
     </script>
-    <script language="javascript"> </script>
-</div>
-<form id="STATICMENU" style="background:none">
-<img src="icon/console.png" width="35" height="55" onclick="click_test()" alt=""/>
-</form>
+				<script language="javascript"> </script>
+			</div>
+			<form id="STATICMENU" style="background: none">
+				<img src="icon/console.png" width="35" height="55"
+					onclick="click_test()" alt="" />
+			</form>
 
 
-  </div>
-  <!-- /.container-fluid -->
-</nav>
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
 
-<footer class="footer" id="footer" align="right" style="color:#8ba0e8; margin-right:10px">Three J Two K company</footer>
-<script src="js/bootstrap.js" type="text/javascript"></script>
+	<footer class="footer" id="footer" align="right"
+		style="color: #8ba0e8; margin-right: 10px">Three J Two K
+		company</footer>
+	<script src="js/bootstrap.js" type="text/javascript"></script>
 </body>
 </html>
 
@@ -172,8 +217,25 @@
 	String src;
 	int state;
 	int seq;
-	
-	
+		
+	//하기전에 밑에 세개 먼저 import하고 실행!
+	//page import="java.net.*"
+	//page import="java.util.Enumeration"
+	//page import="java.util.StringTokenizer"
+        try {
+            for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {
+                NetworkInterface intf = en.nextElement() ;
+                for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {
+                    InetAddress inetAddress = enumIpAddr.nextElement();
+                    if (!inetAddress.isLoopbackAddress()&&inetAddress instanceof Inet4Address) {
+                        String ipAddress=inetAddress.getHostAddress().toString();
+                        //System.out.println(ipAddress);
+                        //ipAddress가 wifi ip 주소!!! 
+                    }
+                }
+            }
+        } catch (SocketException ex) { }
+
 	st = conn.createStatement();
 	
 	//여기 고칠 것!!!!!!
@@ -371,19 +433,17 @@
 		
 		flag = 0;
 	}
-	
-	
+	 
  }
 </script>
 
-<<<<<<< HEAD
-=======
-  </div>
-  <!-- /.container-fluid -->
+</div>
+<!-- /.container-fluid -->
 </nav>
-<footer class="footer" id="footer" align="right" style="color:#8ba0e8; margin-right:10px">Three J Two K company</footer>
+<footer class="footer" id="footer" align="right"
+	style="color: #8ba0e8; margin-right: 10px">Three J Two K
+	company</footer>
 <script src="js/bootstrap.js" type="text/javascript"></script>
 </body>
 </html>
-  <!-- /.container-fluid -->
->>>>>>> origin/master
+<!-- /.container-fluid -->
