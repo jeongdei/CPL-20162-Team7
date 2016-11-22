@@ -210,20 +210,8 @@ input {
 										style="background-color: #FAF8EE; font-size: 10px; width: 4px; padding-left: 0px"
 										onclick="reverseTD(0)">▼</button>
 								</th>
-								<th id="name" style="text-align: center" width="30%">이름
-									<button class="btn" onclick="sortTD(1)"
-										style="background-color: #FAF8EE; font-size: 10px; width: 4px; padding-left: 0px">▲</button>
-									<button class="btn"
-										style="background-color: #FAF8EE; font-size: 10px; width: 4px; padding-left: 0px"
-										onclick="reverseTD(1)">▼</button>
-								</th>
-								<th id="number" style="text-align: center" width="40%">갯수
-									<button class="btn" onclick="sortTD(2)"
-										style="background-color: #FAF8EE; font-size: 10px; width: 4px; padding-left: 0px">▲</button>
-									<button class="btn"
-										style="background-color: #FAF8EE; font-size: 10px; width: 4px; padding-left: 0px"
-										onclick="reverseTD(2)">▼</button>
-								</th>
+								<th id="name" style="text-align: center" width="30%">이름</th>
+								<th id="number" style="text-align: center" width="40%">갯수</th>
 							</tr>
 						</thead>
 					</table>
@@ -273,23 +261,16 @@ input {
 											gnum++;
 										}
 									}
-
-									//String temp = null;
-									//temp = Array_company.get(0);
-									//int comnum = 
-									//Array_company.size() / 3;
-								%>
-								<%
 									for (int i = 0; i < Comp_list.size(); i++) {
 								%>
 								<tr>
-									<th width="40%" style="text-align: center"><input
-										type="checkbox"><br> <span><%=Comp_list.get(i)%></span></th>
+									<td width="40%" style="text-align: center"><input
+										type="checkbox"><br> <span><%=Comp_list.get(i)%></span></td>
 
 									<td><table width="100%">
 											<%
 												for (int j = 0; j < gnum; j++) {
-														if (Array_company1.get(j).equals(Comp_list.get(i))) {
+														//if (Array_company1.get(j).equals(Comp_list.get(i))) {
 											%>
 											<tr>
 												<td width="50%" style="text-align: center"><%=Array_item1.get(j)%></td>
@@ -298,7 +279,7 @@ input {
 													value="<%=Array_count1.get(j)%>"></td>
 											</tr>
 											<%
-												}
+												//}
 													}
 											%>
 										</table></td>
@@ -323,20 +304,8 @@ input {
 										style="background-color: #FAF8EE; font-size: 10px; width: 4px; padding-left: 0px"
 										onclick="reverseTD2(0)">▼</button>
 								</th>
-								<th id="name2" style="text-align: center" width="30%">이름
-									<button class="btn" onclick="sortTD2(1)"
-										style="background-color: #FAF8EE; font-size: 10px; width: 4px; padding-left: 0px">▲</button>
-									<button class="btn"
-										style="background-color: #FAF8EE; font-size: 10px; width: 4px; padding-left: 0px"
-										onclick="reverseTD2(1)">▼</button>
-								</th>
-								<th id="number2" style="text-align: center" width="40%">갯수
-									<button class="btn" onclick="sortTD2(2)"
-										style="background-color: #FAF8EE; font-size: 10px; width: 4px; padding-left: 0px">▲</button>
-									<button class="btn"
-										style="background-color: #FAF8EE; font-size: 10px; width: 4px; padding-left: 0px"
-										onclick="reverseTD2(2)">▼</button>
-								</th>
+								<th id="name2" style="text-align: center" width="30%">이름</th>
+								<th id="number2" style="text-align: center" width="40%">갯수</th>
 							</tr>
 						</thead>
 					</table>
@@ -348,13 +317,13 @@ input {
 									for (int i = 0; i < Comp_list.size(); i++) {
 								%>
 								<tr>
-									<th width="40%" style="text-align: center"><input
-										type="checkbox"><br> <span><%=Comp_list.get(i)%></span></th>
+									<td width="40%" style="text-align: center"><input
+										type="checkbox"><br> <span> <%=Comp_list.get(i)%></span></td>
 
 									<td><table width="100%">
 											<%
 												for (int j = 0; j < pnum; j++) {
-														if (Array_company0.get(j).equals(Comp_list.get(i))){//Array_company1.get(j) == Comp_list.get(i)) {
+														//if (Array_company0.get(j).equals(Comp_list.get(i))){
 											%>
 											<tr>
 												<td width="50%" style="text-align: center"><%=Array_item0.get(j)%></td>
@@ -363,7 +332,7 @@ input {
 													value="<%=Array_count0.get(j)%>"></td>
 											</tr>
 											<%
-												}
+											//	}
 													}
 											%>
 										</table></td>
@@ -383,7 +352,7 @@ input {
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion1"
-											href="#collapseTwo1">수입:얼마</a>
+											href="#collapseTwo1">당일 수입 총액 </a>
 									</h4>
 								</div>
 								<div id="collapseTwo1" class="panel-collapse collapse">
@@ -397,7 +366,7 @@ input {
 								<div class="panel-heading">
 									<h4 class="panel-title">
 										<a data-toggle="collapse" data-parent="#accordion1"
-											href="#collapseThree1">지출:얼마</a>
+											href="#collapseThree1">당일 지출 총액 </a>
 									</h4>
 								</div>
 								<div id="collapseThree1" class="panel-collapse collapse">
@@ -661,6 +630,7 @@ input {
 				replacement(myTable2).ascending(index);
 			}
 			function reverseTD(index) {
+
 				replacement(myTable).descending(index);
 			}
 			function reverseTD2(index) {

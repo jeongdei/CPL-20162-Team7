@@ -597,7 +597,7 @@ function reverseTD( index ){    replace.descending( index );    }
 </script>
 
 </body>
-</html>>>
+</html>
 
 <%
 	int count = 0;
