@@ -151,7 +151,7 @@ span.psw {
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header" style="background-color: #69bd8d; border-color: #69bd8d;" >
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#inverseNavbar1" style="border-color:#fff; background-color:#69bd8d; column-rule-color:#69bd8d;"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-       <a class="navbar-brand" href="#" style="color:#fff; font-size:24px; text-align:center; margin-left:20px; margin-top:-3px" onClick="location='ORDER.html'"><span class="glyphicon glyphicon-credit-card" aria-hidden="true" style="margin-right:-10px">&nbsp;</span>주문으로...</a></div>
+       <a class="navbar-brand" href="#" style="color:#fff; font-size:24px; text-align:center; margin-left:20px; margin-top:-3px" onClick="location='MAIN.html'"><span class="glyphicon glyphicon-credit-card" aria-hidden="true" style="margin-right:-10px">&nbsp;</span>주문으로...</a></div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="inverseNavbar1" align="center" style="background-color: #69BD8D; border-color: #FAF8EE; margin-top: -6px;">
       <ul class="nav navbar-nav navbar-right" style="border-color: #FAF8EE; color: #69bd8d; margin-bottom: 12px;">
@@ -173,6 +173,7 @@ span.psw {
     
     <br>
     
+     <div id ="Shopping_Cart" style="width:100%; height:320px; overflow:auto" align="center">
     <!---------------
 	<script language="javascript">
 	$(document).ready(function() {
@@ -366,64 +367,18 @@ function getTextByClone( tag ){
   <table class="sortable" width="100%" border="0">
   	<thead>
     	<tr>
-    		<th class="check" style="text-align:center; width:25%" >체크<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD (0)">▲</button><button class="btn" onclick="reverseTD (0)" style="background-color: #FAF8EE; font-size: 10px; width: 4px; padding-left: 0px;">▼</button></th>
-            <th class="name" style="text-align:center; width:25%">이름<button class="btn" onclick="sortTD(1)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD(1)">▼</button></th>
-             <th  class="company" style="text-align:center; width:25%">회사<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="sortTD(2)">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px"  onclick="reverseTD(2)">▼</button></th>
-			 <th class="number" style="text-align:center; width:25%">갯수</th>
+    		<th class="check" style="text-align:center">체크<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD (0)">▲</button><button class="btn" onclick="reverseTD (0)" style="background-color: #FAF8EE; font-size: 10px; width: 4px; padding-left: 0px;">▼</button></th>
+            <th class="name" style="text-align:center">이름<button class="btn" onclick="sortTD(1)" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="reverseTD(1)">▼</button></th>
+             <th  class="company" style="text-align:center">회사<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="sortTD(2)">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px"  onclick="reverseTD(2)">▼</button></th>
+			 <th class="number" style="text-align:center">갯수</th>
          </tr>
      </thead>
-     </table>
-          <div id ="Shopping_Cart" style="width:100%; height:350px; overflow:auto" align="center">
-
-     <table id="cart" class="sortable" width="100%" border="0">
   <tbody>			
     <tr>
-      <th scope="row" style="text-align:center" width="25%" ><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE; width:25%" onClick="document.getElementById('id01').style.display='block'">치킨</td>
-      <td style="text-align:center; width:25%">통큐</td>
-      <td style="text-align:center; width:25%"><input type="number" style="width:60px"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="text-align:center" width="25%" ><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE; width:25%" onClick="document.getElementById('id01').style.display='block'">치킨</td>
-      <td style="text-align:center; width:25%">통큐</td>
-      <td style="text-align:center; width:25%"><input type="number" style="width:60px"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="text-align:center" width="25%" ><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE; width:25%" onClick="document.getElementById('id01').style.display='block'">치킨</td>
-      <td style="text-align:center; width:25%">통큐</td>
-      <td style="text-align:center; width:25%"><input type="number" style="width:60px"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="text-align:center" width="25%" ><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE; width:25%" onClick="document.getElementById('id01').style.display='block'">치킨</td>
-      <td style="text-align:center; width:25%">통큐</td>
-      <td style="text-align:center; width:25%"><input type="number" style="width:60px"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="text-align:center" width="25%" ><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE; width:25%" onClick="document.getElementById('id01').style.display='block'">치킨</td>
-      <td style="text-align:center; width:25%">통큐</td>
-      <td style="text-align:center; width:25%"><input type="number" style="width:60px"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="text-align:center" width="25%" ><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE; width:25%" onClick="document.getElementById('id01').style.display='block'">치킨</td>
-      <td style="text-align:center; width:25%">통큐</td>
-      <td style="text-align:center; width:25%"><input type="number" style="width:60px"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="text-align:center" width="25%" ><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE; width:25%" onClick="document.getElementById('id01').style.display='block'">치킨</td>
-      <td style="text-align:center; width:25%">통큐</td>
-      <td style="text-align:center; width:25%"><input type="number" style="width:60px"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="text-align:center" width="25%" ><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE; width:25%" onClick="document.getElementById('id01').style.display='block'">치킨</td>
-      <td style="text-align:center; width:25%">통큐</td>
-      <td style="text-align:center; width:25%"><input type="number" style="width:60px"></td>
+      <th scope="row" style="text-align:center"><input type="checkbox"></th>
+      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE;width: auto" onClick="document.getElementById('id01').style.display='block'">치킨</td>
+      <td style="text-align:center">통큐</td>
+      <td style="text-align:center"><input type="number" style="width:60px"></td>
     </tr>
     <tr>
       <th scope="row" style="text-align:center"><input type="checkbox"></th>
@@ -435,54 +390,6 @@ function getTextByClone( tag ){
       <th scope="row" style="text-align:center"><input type="checkbox"></th>
       <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE;width: auto" onClick="document.getElementById('id01').style.display='block'">감</td>
       <td style="text-align:center">통큐</td>
-      <td style="text-align:center"><input type="number" style="width:60px"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="text-align:center"><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE;width: auto" onClick="document.getElementById('id01').style.display='block'">삼성앨쥐</td>
-      <td style="text-align:center">하바나</td>
-      <td style="text-align:center"><input type="number" style="width:60px"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="text-align:center"><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE;width: auto" onClick="document.getElementById('id01').style.display='block'">삼성앨쥐</td>
-      <td style="text-align:center">하바나</td>
-      <td style="text-align:center"><input type="number" style="width:60px"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="text-align:center"><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE;width: auto" onClick="document.getElementById('id01').style.display='block'">삼성앨쥐</td>
-      <td style="text-align:center">하바나</td>
-      <td style="text-align:center"><input type="number" style="width:60px"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="text-align:center"><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE;width: auto" onClick="document.getElementById('id01').style.display='block'">삼성앨쥐</td>
-      <td style="text-align:center">하바나</td>
-      <td style="text-align:center"><input type="number" style="width:60px"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="text-align:center"><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE;width: auto" onClick="document.getElementById('id01').style.display='block'">삼성앨쥐</td>
-      <td style="text-align:center">하바나</td>
-      <td style="text-align:center"><input type="number" style="width:60px"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="text-align:center"><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE;width: auto" onClick="document.getElementById('id01').style.display='block'">삼성앨쥐</td>
-      <td style="text-align:center">하바나</td>
-      <td style="text-align:center"><input type="number" style="width:60px"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="text-align:center"><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE;width: auto" onClick="document.getElementById('id01').style.display='block'">삼성앨쥐</td>
-      <td style="text-align:center">하바나</td>
-      <td style="text-align:center"><input type="number" style="width:60px"></td>
-    </tr>
-    <tr>
-      <th scope="row" style="text-align:center"><input type="checkbox"></th>
-      <td style="text-align:center; background-color:#FAF8EE; border-color:#FAF8EE;width: auto" onClick="document.getElementById('id01').style.display='block'">삼성앨쥐</td>
-      <td style="text-align:center">하바나</td>
       <td style="text-align:center"><input type="number" style="width:60px"></td>
     </tr>
     <tr>
@@ -648,4 +555,8 @@ function sortTD( index ){    replace.ascending( index );    }
 function reverseTD( index ){    replace.descending( index );    } 
 </script>
 </body>
+<<<<<<< HEAD
 </html>>>>
+=======
+</html>
+>>>>>>> origin/master

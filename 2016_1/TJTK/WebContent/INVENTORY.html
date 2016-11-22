@@ -42,8 +42,8 @@
       </div>
   <!------- ---->
   
-    
-
+    <div align="center">
+   
       <!------ TABLE SORTING javascript -- star -->    
       <script type="text/javascript">
 
@@ -218,6 +218,7 @@ function getTextByClone( tag ){
         return textContent; 
 } 
 </script>
+<<<<<<< HEAD
 
        
 
@@ -229,25 +230,39 @@ function getTextByClone( tag ){
 			 <th class="number" style="text-align:center; width:20%">들어온 갯수<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="sortTD(2)">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px"  onclick="reverseTD(2)">▼</button></th>
               <th class="number" style="text-align:center; width:20%">보유 갯수<button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px" onclick="sortTD(3)">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:10px; width:4px; padding-left:0px"  onclick="reverseTD(3)">▼</button></th>
              <th class="button" style=" width:20%"> 추가하기</th>
+=======
+      <table id="cart_name" class="sortable" style="width: 100%; height: 70%; margin-left: 10px;" border="0" align="center">
+    	<div>
+        <thead>
+        <tr>
+            <th class="name" style="text-align: center; font-size: 13px; width: 22.5%; margin-left:30px">이름<button class="btn" onclick="sortTD(0)" style="background-color:#FAF8EE; font-size:7px; width:3px; padding-left:0px; margin-right:-5px">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:7px; width:3px; padding-left:0px" onclick="reverseTD(0)">▼</button></th>
+             <th class="company" style="text-align:center; font-size:13px; width:16%">회사<button class="btn" style="background-color:#FAF8EE; font-size:7px; width:3px; padding-left:0px; margin-right:-5px" onclick="sortTD(1)">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:7px; width:3px; padding-left:0px"  onclick="reverseTD(1)">▼</button></th>
+			 <th class="number" style="text-align:center; font-size:13px; width:20%">보유수<button class="btn" style="background-color:#FAF8EE; font-size:7px; width:3px; padding-left:0px; margin-right:-5px" onclick="sortTD(2)">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:7px; width:3px; padding-left:0px"  onclick="reverseTD(2)">▼</button></th>
+              <th class="number" style="text-align:center; font-size:13px; width:20%">주문수<button class="btn" style="background-color:#FAF8EE; font-size:7px; width:3px; padding-left:0px; margin-right:-5px" onclick="sortTD(3)">▲</button><button class="btn" style="background-color:#FAF8EE; font-size:7px; width:3px; padding-left:0px"  onclick="reverseTD(3)">▼</button></th>	
+             <th class="button" style="text-align:center; width:21.5%"></th>
+>>>>>>> origin/master
          </tr>
-     </thead>
-     </table>
-         <div id ="Shopping_Cart" style="width:100%; height:320px; overflow:auto" align="center">
-
-<table id="cart" class="sortable" style="width:100%; height:320px; overflow:auto; " border="0"  align="center">
-  <tbody >
+         </thead>
+         </div></table>
+ <div id ="Shopping_Cart" style="width:95%; height:500px; overflow:auto" align="center">
+ <table id="cart" class="sortable" style="width:100%; height:80%;" border="0" align="center">
+       
+  <tbody style="overflow:auto;">
     <tr>
+<<<<<<< HEAD
       <td style="text-align:center">땅땅치킨</td>
       <td style="text-align:center">통큐</td>
       <td style="text-align:center"><input type="number" style="width:60px" value="1"></td>
       <td style="text-align:center"><input type="number" style="width:60px"></td>
       <td style="text-align:center"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
 </tr>
+=======
+>>>>>>> origin/master
       <td style="text-align:center; width:20%">땅땅치킨</td>
       <td style="text-align:center; width:20%">통큐</td>
       <td style="text-align:center; width:20%"><input type="number" style="width:60px"></td>
       <td style="text-align:center; width:20%"><input type="number" style="width:60px"></td>
-      <td style="align:center; width:20%"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
+      <td style="text-align:center; width:20%"><button class="btn btn-block" onclick="" style="background-color:#E69B9C; margin-bottom:5px; width:60px; color:#fff">+Box</button></td>
     </tr>
     <tr>
       <td style="text-align:center">치킨</td>
@@ -336,14 +351,13 @@ function getTextByClone( tag ){
     </tr>
   </tbody>
 </table>
+</div>
   </div>
     <br>
      <!--Chart-box-->    
-    
+    </div>
 <!--End-Chart-box--> 
 <br>
-    
-  </div>
   <!-- /.container-fluid -->
 </nav>
 <footer class="footer" id="footer" align="right" style="color:#8ba0e8; margin-right:10px">Three J Two K company</footer>
@@ -351,15 +365,12 @@ function getTextByClone( tag ){
 <script src="js/bootstrap.js" type="text/javascript"></script>
 <script type="text/javascript">
 var myTable = document.getElementById( "cart" ); 
-var myTable2 = document.getElementById( "cart2" ); 
 
-//var replace = replacement( myTable ); 
+var replace = replacement( myTable ); 
 
 function sortTD( index ){    replacement(myTable).ascending( index );    } 
-function sortTD2( index ){    replacement(myTable2).ascending( index );    } 
 
 function reverseTD( index ){    replacement(myTable).descending( index );    } 
-function reverseTD2( index ){    replacement(myTable2).descending( index );    } 
 </script>
 </body>
 </html>

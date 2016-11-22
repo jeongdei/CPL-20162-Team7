@@ -81,15 +81,13 @@
     <strong><label style="margin-left: 42px; margin-right:70px; font-size:16px" align="left">리모콘 보기</label></strong>
     <label class="switch" style="background-color:#000000">
       <input type="checkbox" class="switch-input">
-      <span id="remote_state" class="switch-label" data-on="On" data-off="Off"></span>
+      <span class="switch-label" data-on="On" data-off="Off"></span>
       <span class="switch-handle"></span>
     </label><br>
     <div class="panel-group" id="accordion1">
       <div class="panel panel-default" style="background-color:#FAF8EE; border-color:#FAF8EE; color:#000000">
         <div class="panel-heading" style="background-color:#FAF8EE; border-color:#FAF8EE; color:#000000">
-         
           <h4 class="panel-title" align="center"><strong><label data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">리모콘 버튼 설정 ↓</label></strong></h4>
-         
         </div>
         <div id="collapseOne1" class="panel-collapse collapse in">
     <label style="font-size:16px; margin-right:60px; margin-left:80px">1번 버튼
@@ -110,12 +108,12 @@
     <label style="font-size:16px; margin-right:60px; margin-left:80px">2번 버튼
     </label>
     <div class="btn-group">
-      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="height: 15px; font-size: 10px; padding-bottom: 18px; border-color: rgba(71,168,216,1.00); width: 70px; padding-right: 68px;">메뉴 고르기
+      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="height: 15px; font-size: 10px; padding-bottom: 18px; border-color: rgba(71,168,216,1.00); width: 70px; padding-right: 68px;"><a id="one"></a>
       <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" role="menu">
         <li role="presentation" class="dropdown-header">Dropdown header 1</li>
-        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">First Link</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#" onClick="id='one'">First Link</a></li>
         <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">Disabled Link</a></li>
         <li role="presentation" class="divider"></li>
         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated Link</a></li>
